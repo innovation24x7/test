@@ -1,0 +1,91 @@
+<html>
+	<head>
+	    <title>SOE Log Analyzer</title>
+	    <style>
+
+	    html, body {
+	        height: 80%;
+	        margin: 0;
+	        padding: 0;
+	        width: 100%;
+	    }
+
+	    body {
+	        display: table;
+	    }
+
+	    .my-block {
+	        text-align: center;
+	        display: table-cell;
+	        vertical-align: middle;
+	    }
+		.custom-file-upload {
+		    border: 1px solid #ccc;
+		    color: #0078d7;
+		    display: inline-block;
+		    padding: 6px 12px;
+		    cursor: pointer;
+		    font-size: x-large;		    
+		}
+		.uploadsection{
+			padding: 20px;
+		}
+		.loglabel{
+			color: grey;
+			font-size: xx-large;						
+			padding: 5px;
+		}
+		.analyze{
+			color: black;
+			background-color: #0078d7;			
+			font-size: xx-large;		
+			padding: 10px;	
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	    </style>
+	    <script type="text/javascript">
+		    function beforeSubmit(){
+	            filenames = document.getElementById("logfiles").files;
+	            if(filenames.length == 0){
+	            	alert("Please select the SOE log files to analyze.");
+	            	return false;
+	            }
+	            for(i=0;i<filenames.length;i++){
+	            	if(!isValidLogFile(filenames[i].name)){
+	            		return false;
+	            	}
+	            }
+	            document.getElementById("fileform").style.display = "none";
+	            document.getElementById("uploadimage").style.display = "block";
+		    }
+		    function isValidLogFile(fileName){
+				var regex = new RegExp("^soeapp([\.0-9-]+)log$");
+				if (regex.test(fileName)) {
+				    return true;
+				} else {
+					alert(fileName + " can not be analyzed.\n\nPlease upload soeapp.<date>.log files only.")
+				    return false;
+				}
+		    }
+		</script>
+    </head>
+  <body>  	
+  	<div class="my-block">
+  		<div id="fileform">
+	    	<form ref='uploadForm' id='uploadForm' action='uploadFile' method='post' encType="multipart/form-data">
+		    	<div class="uploadsection">
+			    	<label class="loglabel">Select SOE log files to analyze</label>
+			        <input id="logfiles" class="custom-file-upload" type="file" name="soeappLogFile" multiple/>
+				</div>
+				<div>
+			       	<input id="submitbutton" class="analyze" type='submit' value='Analyze selected SOE log files!' onclick="return beforeSubmit();"/>
+		        </div>
+	    	</form>
+    	</div>
+    	<div id="uploadimage" style="display:none">
+    		<img src=/images/uploadfiles.gif></img>
+    	</div>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+applications:
+- path: .
+  name: soe-log-analyzer
+  host: soe-log-analyzer
+  memory: 1024M
+  instances: 1

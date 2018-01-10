@@ -1,0 +1,104 @@
+<html>
+<head>
+  <title>
+    Conversation Details
+  </title>
+  <style type="text/css">
+    .analysistext{
+      color: black;
+      font-size: large;
+    }
+    .detailsbutton{
+      color: white;
+      background-color: #0078d7;
+      font-size: large;
+    }
+    .header {
+      background-color: #0078d7;
+      color: #fff;
+      padding: 2rem;
+    }
+    .headertitle {
+        color: white;
+        text-decoration: none;
+    }
+    .buttons{
+      width: 115px;
+      height: 25px;
+      background: #4E9CAF;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+  <script type="text/javascript">
+    function showAllJson(key){
+      document.getElementById('json'+key).style.display="block";
+      document.getElementById('hideMessage'+key).style.display="block";
+      document.getElementById('showMessage'+key).style.display="none";
+    }
+    function hideAllJson(key){
+      document.getElementById('json'+key).style.display="none";
+      document.getElementById('hideMessage'+key).style.display="none";
+      document.getElementById('showMessage'+key).style.display="block";
+    }
+  </script>
+</head>
+<body>
+  <div class="header"> 
+    <span>
+      <span style="text-align: center"><h1><a class="headertitle" href="/">SOE Log Analyzer</a></h1></span>
+      <span style="text-align: right">
+        <h2>
+          <a class="buttons" href="javascript:history.back()">Analyze other VGWSessionIds</a>
+          <a class="buttons" href="/">Home</a>
+        </h2>
+      </span>
+    </span>    
+    <h2>Log analysis: vgwSessionId <%= vgwSessionId %></h2> 
+  </div>
+
+  <table width="100%" border=1>
+    <th></th>
+    <th>Message Between</th>
+    <th>Key Info About Message</th>
+    <th>Details</th>
+    <% i = 0 %>
+    <%  Object.keys(conversation).forEach(function (key) { %>
+      <tr>
+        <td colspan=4 bgcolor="#0078d7">
+          <%if(conversation[key].description == "VG-To-SOE-Request"){%>
+            Message Details
+            <%}%>
+        </td>
+      </tr>
+      <tr>
+        <td><b><%= ++i %></b></td>
+        <td width="10%">
+          <i><%=conversation[key].description%></i>
+        </td>
+        <td width="60%">
+            <label class="analysistext"><%=JSON.stringify(conversation[key].analysis)%></label>
+        </td>
+        <td width="30%">         
+          <div id="showMessage<%=key%>" style="display: block">
+            <input class="detailsbutton" type="button" onclick='showAllJson("<%=key%>")' value="View complete Json"></input>
+          </div>
+          <div id="hideMessage<%=key%>" style="display: none">
+            <input class="detailsbutton" type="button" onclick='hideAllJson("<%=key%>")' value="Hide complete Json"></input>
+          </div>
+          <div id="json<%=key%>" style="display: none">
+            <%=conversation[key].description%>
+            <pre>
+              <%=conversation[key].allJson%>
+            </pre>
+          </div>            
+        </td>
+      </tr>
+      <% }) %>
+  </table>
+</body>
+</html>

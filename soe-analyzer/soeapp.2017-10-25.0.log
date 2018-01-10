@@ -1,0 +1,4095 @@
+12-29-2017 13:57:29.765  [http-nio-8080-exec-6]
+        DEBUG
+        c.i.s.c.ConversationController.debug(123) - VG to SOE  Request Start#1018174648898583TS#{
+  "input": {},
+  "context": {
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp"
+  }
+}VG to SOE  Request End 
+12-29-2017 13:57:29.769  [http-nio-8080-exec-6]
+        INFO 
+        c.i.s.c.ConversationController.info(149) - {"input":null,"method":"converse","conversation_id":null,"dialog_id":"1fa52463-8829-4801-9416-c6e87892c2c3"} 
+12-29-2017 13:57:29.770 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        com.ibm.soe.vg.debug(123) -  workspaceId:1fa52463-8829-4801-9416-c6e87892c2c3 convsId:null input:null 
+12-29-2017 13:57:29.772 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        TRACE
+        com.ibm.soe.dtmf.DTMFHandler.trace(92) - Removed DTMF Character from memberId to: null 
+12-29-2017 13:57:29.772 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - message::Entry 
+12-29-2017 13:57:29.773 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.w.d.util.CredentialUtils.getKeyUsingJNDI(125) - JNDI watson-developer-cloud/conversation/credentials not found. 
+12-29-2017 13:57:29.794 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Endpoint used for wcs":"https://gateway.watsonplatform.net/conversation/api"} 
+12-29-2017 13:57:29.795 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - SOE to WCS Request Start#1018174678715223TS#{
+  "context": {
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp"
+  },
+  "input": {
+    "text": ""
+  }
+}SOE to WCS Request End 
+12-29-2017 13:57:29.818 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-21-thread-1]
+        DEBUG
+        com.ibm.soe.service.wcs.debug(118) - {"inputText:":""} 
+12-29-2017 13:57:31.429 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-21-thread-1]
+        DEBUG
+        c.i.s.s.impl.WCSHttpServiceImpl.debug(123) - wcs response:{
+  "context": {
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "How may I assist you"
+        }
+      ],
+      "dialog_turn_counter": 1.0,
+      "dialog_request_counter": 1.0
+    },
+    "action": {
+      "route": "TTS",
+      "method": ""
+    },
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "invalid_auth_attempt": false,
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "contracting_letter_trigger": "",
+    "vgwPostResponseTimeoutCount": 10000.0,
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "vgwDisconnectCallOnTransferFailure": "Yes"
+  },
+  "entities": [],
+  "intents": [],
+  "output": {
+    "text": [],
+    "nodes_visited": [
+      "Welcome",
+      "How may I assist you"
+    ],
+    "vgwActionSequence": [
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "timestamps": true,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": true,
+            "customization_id": "41b7390a-9398-4d3f-ac46-ae3bf25609c7",
+            "smart_formatting": true,
+            "firmup_silence_time": 1.0,
+            "x-watson-learning-opt-out": true
+          }
+        }
+      },
+      {
+        "command": "vgwActDisableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActEnableSpeechBargeIn"
+      },
+      {
+        "command": "vgwActPauseDTMF"
+      },
+      {
+        "command": "vgwActPlayText",
+        "parameters": {
+          "text": [
+            "Calls are recorded for quality assurance.  Thank you for calling the Humana eligibility and benefits assistant. How may I help you?"
+          ]
+        }
+      }
+    ],
+    "log_messages": []
+  },
+  "input": {
+    "text": ""
+  }
+} 
+12-29-2017 13:57:31.430 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-21-thread-1]
+        DEBUG
+        com.ibm.soe.wcs.responsetime.debug(118) - {"responsetime":1611} 
+12-29-2017 13:57:31.431 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-21-thread-1]
+        DEBUG
+        com.ibm.soe.service.wcs.debug(118) - {"outputText:":"[]"} 
+12-29-2017 13:57:31.434 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - WCS to SOE response Start#1018176316104054TS#{
+  "context": {
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "How may I assist you"
+        }
+      ],
+      "dialog_turn_counter": 1.0,
+      "dialog_request_counter": 1.0
+    },
+    "action": {
+      "route": "TTS",
+      "method": ""
+    },
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "invalid_auth_attempt": false,
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "contracting_letter_trigger": "",
+    "vgwPostResponseTimeoutCount": 10000.0,
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "vgwDisconnectCallOnTransferFailure": "Yes"
+  },
+  "entities": [],
+  "intents": [],
+  "output": {
+    "text": [],
+    "nodes_visited": [
+      "Welcome",
+      "How may I assist you"
+    ],
+    "vgwActionSequence": [
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "timestamps": true,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": true,
+            "customization_id": "41b7390a-9398-4d3f-ac46-ae3bf25609c7",
+            "smart_formatting": true,
+            "firmup_silence_time": 1.0,
+            "x-watson-learning-opt-out": true
+          }
+        }
+      },
+      {
+        "command": "vgwActDisableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActEnableSpeechBargeIn"
+      },
+      {
+        "command": "vgwActPauseDTMF"
+      },
+      {
+        "command": "vgwActPlayText",
+        "parameters": {
+          "text": [
+            "Calls are recorded for quality assurance.  Thank you for calling the Humana eligibility and benefits assistant. How may I help you?"
+          ]
+        }
+      }
+    ],
+    "log_messages": []
+  },
+  "input": {
+    "text": ""
+  }
+}WCS to SOE response End 
+12-29-2017 13:57:31.435 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Entities from wcs response: ":[]} 
+12-29-2017 13:57:31.437 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Intents from wcs response":[]} 
+12-29-2017 13:57:31.437 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - message::Exit 
+12-29-2017 13:57:31.438 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - doNextActions::Entry 
+12-29-2017 13:57:31.438 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - getActionsToPerform::Entry 
+12-29-2017 13:57:31.438 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - route : TTS,method : ,info :null 
+12-29-2017 13:57:31.439 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - getActionToPerform::Exit 
+12-29-2017 13:57:31.440 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        com.ibm.soe.service.impl.SOECoreImpl.debug(123) - Populating Variants. 
+12-29-2017 13:57:31.440 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.s.s.c.f.SmartVariationPopulator.debug(118) - {"In Smart Variant Populator. Routemethod ":"respondToUser"} 
+12-29-2017 13:57:31.442 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        INFO 
+        c.i.h.service.impl.AppServiceImpl.info(149) - {"input":null,"conversation_id":"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab","profile":"{\n  \"name_values\": [\n    {\n      \"name\": \"vgwSIPFromURI\",\n      \"value\": \"sip:918043185594@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwSessionID\",\n      \"value\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwSIPCallID\",\n      \"value\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwSIPRequestURI\",\n      \"value\": \"sip:1910001@133.29.9.85:5060;transport\\u003dtcp\"\n    },\n    {\n      \"name\": \"conversation_id\",\n      \"value\": \"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab\"\n    },\n    {\n      \"name\": \"action\",\n      \"value\": \"{route\\u003dTTS, method\\u003d}\"\n    },\n    {\n      \"name\": \"input_tries\",\n      \"value\": \"0.0\"\n    },\n    {\n      \"name\": \"play_mem_group\",\n      \"value\": \"false\"\n    },\n    {\n      \"name\": \"invalid_auth_attempt\",\n      \"value\": \"false\"\n    },\n    {\n      \"name\": \"vgwTransferFailedMessage\",\n      \"value\": \"Sorry, I could not transfer your call at this time. Please try your call again.\"\n    },\n    {\n      \"name\": \"contracting_letter_trigger\",\n      \"value\": \"\"\n    },\n    {\n      \"name\": \"vgwPostResponseTimeoutCount\",\n      \"value\": \"10000.0\"\n    },\n    {\n      \"name\": \"vgwConversationFailedMessage\",\n      \"value\": \"Sorry, we are having technical difficulties, please try your call again\"\n    },\n    {\n      \"name\": \"vgwDisconnectCallOnTransferFailure\",\n      \"value\": \"Yes\"\n    }\n  ]\n}","dialog_id":"1fa52463-8829-4801-9416-c6e87892c2c3"} 
+12-29-2017 13:57:31.443 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Entry::performAction 
+12-29-2017 13:57:31.444 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(118) - {"actionToPerform:":"com.ibm.humana.rule.action.SendResponseToUserImpl"} 
+12-29-2017 13:57:31.444 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - actionToPerform:com.ibm.humana.rule.action.SendResponseToUserImpl 
+12-29-2017 13:57:31.445 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - executeAction::start 
+12-29-2017 13:57:31.445 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        TRACE
+        c.i.h.r.a.SendResponseToUserImpl.trace(92) - Entering SendResponseToUserImpl::performAction 
+12-29-2017 13:57:31.445 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - Entering DialogRouteAction::setToUserResponseInConversation 
+12-29-2017 13:57:31.446 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.h.rule.action.DialogRouteAction.debug(123) - provider is not authenticated 
+12-29-2017 13:57:31.446 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - Exit DialogRouteAction::setToUserResponseInConversation 
+12-29-2017 13:57:31.447 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        TRACE
+        c.i.h.r.a.SendResponseToUserImpl.trace(92) - Exit SendResponseToUserImpl::performAction 
+12-29-2017 13:57:31.447 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - executeAction::end 
+12-29-2017 13:57:31.450 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Judging whether api should be retried 
+12-29-2017 13:57:31.450 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Is APi?: false 
+12-29-2017 13:57:31.451 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Was last api call successful?: false 
+12-29-2017 13:57:31.451 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Are more variants for input available?:false 
+12-29-2017 13:57:31.451 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Exit::performAction 
+12-29-2017 13:57:31.452 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - doNextActions::Exit 
+12-29-2017 13:57:31.452 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - Entering postProcessing  
+12-29-2017 13:57:31.453 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - Exit postProcessing 
+12-29-2017 13:57:31.453 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        c.i.s.c.ConversationController.debug(123) - SOE to VG Response Start#1018176336812584TS#{
+  "context": {
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "How may I assist you"
+        }
+      ],
+      "dialog_turn_counter": 1.0,
+      "dialog_request_counter": 1.0
+    },
+    "action": {
+      "route": "TTS",
+      "method": ""
+    },
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "invalid_auth_attempt": false,
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "contracting_letter_trigger": "",
+    "vgwPostResponseTimeoutCount": 10000.0,
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "CURRENT_DATE": "12/29/2017",
+    "soe_context_map": {}
+  },
+  "entities": [],
+  "intents": [],
+  "output": {
+    "vgwActionSequence": [
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "timestamps": true,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": true,
+            "customization_id": "41b7390a-9398-4d3f-ac46-ae3bf25609c7",
+            "smart_formatting": true,
+            "firmup_silence_time": 1.0,
+            "x-watson-learning-opt-out": true
+          }
+        }
+      },
+      {
+        "command": "vgwActDisableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActEnableSpeechBargeIn"
+      },
+      {
+        "command": "vgwActPauseDTMF"
+      },
+      {
+        "command": "vgwActPlayText",
+        "parameters": {
+          "text": [
+            "Calls are recorded for quality assurance.  Thank you for calling the Humana eligibility and benefits assistant. How may I help you?"
+          ]
+        }
+      }
+    ],
+    "text": [
+      "Calls are recorded for quality assurance.  Thank you for calling the Humana eligibility and benefits assistant. How may I help you?"
+    ]
+  }
+}SOE to VG Response End 
+12-29-2017 13:57:31.454 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        TRACE
+        c.i.s.c.ConversationController.trace(92) - message::exit 
+12-29-2017 13:57:31.473 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        com.ibm.soe.vg.debug(123) -  workspaceId:1fa52463-8829-4801-9416-c6e87892c2c3 convsId:a79b63b1-f2c6-4906-88b7-40fd68a3d1ab output:[Calls are recorded for quality assurance.  Thank you for calling the Humana eligibility and benefits assistant. How may I help you?] 
+12-29-2017 13:57:31.474 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-6]
+        DEBUG
+        com.ibm.soe.responsetime.debug(118) - {"responsetime":1709} 
+12-29-2017 13:57:33.061  [http-nio-8080-exec-7]
+        DEBUG
+        c.i.s.c.ConversationController.debug(123) - VG to SOE  Request Start#1018177944212877TS#{
+  "input": {
+    "text": "benefits"
+  },
+  "context": {
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "How may I assist you"
+        }
+      ],
+      "dialog_turn_counter": 1,
+      "dialog_request_counter": 1
+    },
+    "action": {
+      "route": "TTS",
+      "method": ""
+    },
+    "input_tries": 0,
+    "play_mem_group": false,
+    "invalid_auth_attempt": false,
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "contracting_letter_trigger": "",
+    "vgwPostResponseTimeoutCount": 10000,
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "CURRENT_DATE": "12/29/2017",
+    "soe_context_map": {}
+  }
+}VG to SOE  Request End 
+12-29-2017 13:57:33.062  [http-nio-8080-exec-7]
+        INFO 
+        c.i.s.c.ConversationController.info(149) - {"input":"benefits","method":"converse","conversation_id":"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab","dialog_id":"1fa52463-8829-4801-9416-c6e87892c2c3"} 
+12-29-2017 13:57:33.062 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        com.ibm.soe.vg.debug(123) -  workspaceId:1fa52463-8829-4801-9416-c6e87892c2c3 convsId:a79b63b1-f2c6-4906-88b7-40fd68a3d1ab input:benefits 
+12-29-2017 13:57:33.064 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        TRACE
+        com.ibm.soe.dtmf.DTMFHandler.trace(92) - Removed DTMF Character from memberId to: benefits 
+12-29-2017 13:57:33.065 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - message::Entry 
+12-29-2017 13:57:33.066 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.w.d.util.CredentialUtils.getKeyUsingJNDI(125) - JNDI watson-developer-cloud/conversation/credentials not found. 
+12-29-2017 13:57:33.075 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Endpoint used for wcs":"https://gateway.watsonplatform.net/conversation/api"} 
+12-29-2017 13:57:33.076 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - SOE to WCS Request Start#1018177959957300TS#{
+  "context": {
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 10000,
+    "invalid_auth_attempt": false,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "How may I assist you"
+        }
+      ],
+      "dialog_turn_counter": 1,
+      "dialog_request_counter": 1
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again"
+  },
+  "input": {
+    "text": "benefits"
+  }
+}SOE to WCS Request End 
+12-29-2017 13:57:33.081 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-22-thread-1]
+        DEBUG
+        com.ibm.soe.service.wcs.debug(118) - {"inputText:":"benefits"} 
+12-29-2017 13:57:34.744 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-22-thread-1]
+        DEBUG
+        c.i.s.s.impl.WCSHttpServiceImpl.debug(123) - wcs response:{
+  "context": {
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "invalid_auth_attempt": false,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_3_1509120231185"
+        }
+      ],
+      "dialog_turn_counter": 2.0,
+      "dialog_request_counter": 2.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "usr_intent": "describe_benefits",
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,"
+    },
+    "action": {
+      "info": {
+        "PHI": {
+          "type": "taxid",
+          "enableSmartCorrection": "true"
+        }
+      },
+      "route": "TTS",
+      "method": ""
+    },
+    "tin_tries": 0.0
+  },
+  "entities": [
+    {
+      "entity": "allergy_type",
+      "location": [
+        0,
+        8
+      ],
+      "value": "benefits"
+    }
+  ],
+  "intents": [
+    {
+      "confidence": 1.0,
+      "intent": "describe_benefits"
+    }
+  ],
+  "output": {
+    "text": [
+      "Check values to skip tax input or not",
+      "\u003cspeak version\u003d\u00271.0\u0027\u003eLet me remind you that all benefits and payments are subject to the member\u0027s eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. \u003c/speak\u003e"
+    ],
+    "nodes_visited": [
+      "node_1_1506530563659",
+      "Tax ID Input",
+      "node_3_1509120231185"
+    ],
+    "vgwActionSequence": [
+      {
+        "command": "vgwActUnPauseDTMF"
+      },
+      {
+        "command": "vgwActEnableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "timestamps": false,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": false,
+            "customization_id": "184637d0-5de9-4090-8de8-bc0b22c0fb42",
+            "max_alternatives": 2.0,
+            "smart_formatting": false,
+            "firmup_silence_time": 1.5,
+            "customization_weight": 0.8,
+            "x-watson-learning-opt-out": true
+          },
+          "confidenceScoreThreshold": 0.0
+        }
+      },
+      {
+        "command": "vgwActCollectDtmf",
+        "parameters": {
+          "dtmfCount": "9"
+        }
+      },
+      {
+        "command": "vgwActPlayText",
+        "parameters": {
+          "text": [
+            "\u003cspeak version\u003d\u00271.0\u0027\u003eLet me remind you that all benefits and payments are subject to the member\u0027s eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. \u003c/speak\u003e"
+          ]
+        }
+      }
+    ],
+    "log_messages": []
+  },
+  "input": {
+    "text": "benefits"
+  }
+} 
+12-29-2017 13:57:34.744 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-22-thread-1]
+        DEBUG
+        com.ibm.soe.wcs.responsetime.debug(118) - {"responsetime":1662} 
+12-29-2017 13:57:34.745 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-22-thread-1]
+        DEBUG
+        com.ibm.soe.service.wcs.debug(118) - {"outputText:":"[Check values to skip tax input or not, \u003cspeak version\u003d\u00271.0\u0027\u003eLet me remind you that all benefits and payments are subject to the member\u0027s eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. \u003c/speak\u003e]"} 
+12-29-2017 13:57:34.746 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - WCS to SOE response Start#1018179629047080TS#{
+  "context": {
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "invalid_auth_attempt": false,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_3_1509120231185"
+        }
+      ],
+      "dialog_turn_counter": 2.0,
+      "dialog_request_counter": 2.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "usr_intent": "describe_benefits",
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,"
+    },
+    "action": {
+      "info": {
+        "PHI": {
+          "type": "taxid",
+          "enableSmartCorrection": "true"
+        }
+      },
+      "route": "TTS",
+      "method": ""
+    },
+    "tin_tries": 0.0
+  },
+  "entities": [
+    {
+      "entity": "allergy_type",
+      "location": [
+        0,
+        8
+      ],
+      "value": "benefits"
+    }
+  ],
+  "intents": [
+    {
+      "confidence": 1.0,
+      "intent": "describe_benefits"
+    }
+  ],
+  "output": {
+    "text": [
+      "Check values to skip tax input or not",
+      "\u003cspeak version\u003d\u00271.0\u0027\u003eLet me remind you that all benefits and payments are subject to the member\u0027s eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. \u003c/speak\u003e"
+    ],
+    "nodes_visited": [
+      "node_1_1506530563659",
+      "Tax ID Input",
+      "node_3_1509120231185"
+    ],
+    "vgwActionSequence": [
+      {
+        "command": "vgwActUnPauseDTMF"
+      },
+      {
+        "command": "vgwActEnableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "timestamps": false,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": false,
+            "customization_id": "184637d0-5de9-4090-8de8-bc0b22c0fb42",
+            "max_alternatives": 2.0,
+            "smart_formatting": false,
+            "firmup_silence_time": 1.5,
+            "customization_weight": 0.8,
+            "x-watson-learning-opt-out": true
+          },
+          "confidenceScoreThreshold": 0.0
+        }
+      },
+      {
+        "command": "vgwActCollectDtmf",
+        "parameters": {
+          "dtmfCount": "9"
+        }
+      },
+      {
+        "command": "vgwActPlayText",
+        "parameters": {
+          "text": [
+            "\u003cspeak version\u003d\u00271.0\u0027\u003eLet me remind you that all benefits and payments are subject to the member\u0027s eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. \u003c/speak\u003e"
+          ]
+        }
+      }
+    ],
+    "log_messages": []
+  },
+  "input": {
+    "text": "benefits"
+  }
+}WCS to SOE response End 
+12-29-2017 13:57:34.747 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Entities from wcs response: ":[{"entity":"allergy_type","location":[0,8],"value":"benefits"}]} 
+12-29-2017 13:57:34.748 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Intents from wcs response":[{"confidence":1.0,"intent":"describe_benefits"}]} 
+12-29-2017 13:57:34.749 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - message::Exit 
+12-29-2017 13:57:34.749 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - doNextActions::Entry 
+12-29-2017 13:57:34.750 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - getActionsToPerform::Entry 
+12-29-2017 13:57:34.750 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - route : TTS,method : ,info :{PHI={type=taxid, enableSmartCorrection=true}} 
+12-29-2017 13:57:34.750 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - getActionToPerform::Exit 
+12-29-2017 13:57:34.751 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        com.ibm.soe.service.impl.SOECoreImpl.debug(123) - Populating Variants. 
+12-29-2017 13:57:34.751 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.s.s.c.f.SmartVariationPopulator.debug(118) - {"In Smart Variant Populator. Routemethod ":"respondToUser"} 
+12-29-2017 13:57:34.752 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        INFO 
+        c.i.h.service.impl.AppServiceImpl.info(149) - {"input":"benefits ","conversation_id":"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab","profile":"{\n  \"name_values\": [\n    {\n      \"name\": \"vgwSIPFromURI\",\n      \"value\": \"sip:918043185594@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwTransferFailedMessage\",\n      \"value\": \"Sorry, I could not transfer your call at this time. Please try your call again.\"\n    },\n    {\n      \"name\": \"vgwDisconnectCallOnTransferFailure\",\n      \"value\": \"Yes\"\n    },\n    {\n      \"name\": \"vgwPostResponseTimeoutCount\",\n      \"value\": \"20000.0\"\n    },\n    {\n      \"name\": \"invalid_auth_attempt\",\n      \"value\": \"false\"\n    },\n    {\n      \"name\": \"vgwSIPCallID\",\n      \"value\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwSIPRequestURI\",\n      \"value\": \"sip:1910001@133.29.9.85:5060;transport\\u003dtcp\"\n    },\n    {\n      \"name\": \"conversation_id\",\n      \"value\": \"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab\"\n    },\n    {\n      \"name\": \"contracting_letter_trigger\",\n      \"value\": \"\"\n    },\n    {\n      \"name\": \"input_tries\",\n      \"value\": \"0.0\"\n    },\n    {\n      \"name\": \"play_mem_group\",\n      \"value\": \"false\"\n    },\n    {\n      \"name\": \"CURRENT_DATE\",\n      \"value\": \"12/29/2017\"\n    },\n    {\n      \"name\": \"vgwSessionID\",\n      \"value\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwConversationFailedMessage\",\n      \"value\": \"Sorry, we are having technical difficulties, please try your call again\"\n    },\n    {\n      \"name\": \"usr_intent\",\n      \"value\": \"describe_benefits\"\n    },\n    {\n      \"name\": \"CURRENT_MEMBER\",\n      \"value\": \"{BENEFIT_CODE\\u003d98,}\"\n    },\n    {\n      \"name\": \"action\",\n      \"value\": \"{info\\u003d{PHI\\u003d{type\\u003dtaxid, enableSmartCorrection\\u003dtrue}}, route\\u003dTTS, method\\u003d}\"\n    },\n    {\n      \"name\": \"tin_tries\",\n      \"value\": \"0.0\"\n    }\n  ]\n}","dialog_id":"1fa52463-8829-4801-9416-c6e87892c2c3"} 
+12-29-2017 13:57:34.753 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Entry::performAction 
+12-29-2017 13:57:34.753 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(118) - {"actionToPerform:":"com.ibm.humana.rule.action.SendResponseToUserImpl"} 
+12-29-2017 13:57:34.753 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - actionToPerform:com.ibm.humana.rule.action.SendResponseToUserImpl 
+12-29-2017 13:57:34.754 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - executeAction::start 
+12-29-2017 13:57:34.754 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        TRACE
+        c.i.h.r.a.SendResponseToUserImpl.trace(92) - Entering SendResponseToUserImpl::performAction 
+12-29-2017 13:57:34.755 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - Entering DialogRouteAction::setToUserResponseInConversation 
+12-29-2017 13:57:34.756 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.h.rule.action.DialogRouteAction.debug(123) - provider is not authenticated 
+12-29-2017 13:57:34.756 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - Exit DialogRouteAction::setToUserResponseInConversation 
+12-29-2017 13:57:34.757 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        TRACE
+        c.i.h.r.a.SendResponseToUserImpl.trace(92) - Exit SendResponseToUserImpl::performAction 
+12-29-2017 13:57:34.757 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - executeAction::end 
+12-29-2017 13:57:34.757 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Judging whether api should be retried 
+12-29-2017 13:57:34.758 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Is APi?: false 
+12-29-2017 13:57:34.758 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Was last api call successful?: false 
+12-29-2017 13:57:34.759 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Are more variants for input available?:false 
+12-29-2017 13:57:34.759 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Exit::performAction 
+12-29-2017 13:57:34.760 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - doNextActions::Exit 
+12-29-2017 13:57:34.760 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - Entering postProcessing  
+12-29-2017 13:57:34.760 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - Exit postProcessing 
+12-29-2017 13:57:34.761 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        c.i.s.c.ConversationController.debug(123) - SOE to VG Response Start#1018179644435400TS#{
+  "context": {
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "invalid_auth_attempt": false,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_3_1509120231185"
+        }
+      ],
+      "dialog_turn_counter": 2.0,
+      "dialog_request_counter": 2.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "usr_intent": "describe_benefits",
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,"
+    },
+    "action": {
+      "info": {
+        "PHI": {
+          "type": "taxid",
+          "enableSmartCorrection": "true"
+        }
+      },
+      "route": "TTS",
+      "method": ""
+    },
+    "tin_tries": 0.0,
+    "soe_context_map": {
+      "enable_taxid_correction": true,
+      "phi_flag": "taxid"
+    }
+  },
+  "entities": [
+    {
+      "entity": "allergy_type",
+      "location": [
+        0,
+        8
+      ],
+      "value": "benefits"
+    }
+  ],
+  "intents": [
+    {
+      "confidence": 1.0,
+      "intent": "describe_benefits"
+    }
+  ],
+  "output": {
+    "vgwActionSequence": [
+      {
+        "command": "vgwActUnPauseDTMF"
+      },
+      {
+        "command": "vgwActEnableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "timestamps": false,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": false,
+            "customization_id": "184637d0-5de9-4090-8de8-bc0b22c0fb42",
+            "max_alternatives": 2.0,
+            "smart_formatting": false,
+            "firmup_silence_time": 1.5,
+            "customization_weight": 0.8,
+            "x-watson-learning-opt-out": true
+          },
+          "confidenceScoreThreshold": 0.0
+        }
+      },
+      {
+        "command": "vgwActCollectDtmf",
+        "parameters": {
+          "dtmfCount": "9"
+        }
+      },
+      {
+        "command": "vgwActPlayText",
+        "parameters": {
+          "text": [
+            "\u003cspeak version\u003d\u00271.0\u0027\u003eLet me remind you that all benefits and payments are subject to the member\u0027s eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. \u003c/speak\u003e"
+          ]
+        }
+      }
+    ],
+    "text": [
+      "\u003cspeak version\u003d\u00271.0\u0027\u003eLet me remind you that all benefits and payments are subject to the member\u0027s eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. \u003c/speak\u003e"
+    ]
+  }
+}SOE to VG Response End 
+12-29-2017 13:57:34.761 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        TRACE
+        c.i.s.c.ConversationController.trace(92) - message::exit 
+12-29-2017 13:57:34.762 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        com.ibm.soe.vg.debug(123) -  workspaceId:1fa52463-8829-4801-9416-c6e87892c2c3 convsId:a79b63b1-f2c6-4906-88b7-40fd68a3d1ab output:[<speak version='1.0'>Let me remind you that all benefits and payments are subject to the member's eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. </speak>] 
+12-29-2017 13:57:34.762 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-7]
+        DEBUG
+        com.ibm.soe.responsetime.debug(118) - {"responsetime":1701} 
+12-29-2017 13:57:37.227  [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.c.ConversationController.debug(123) - VG to SOE  Request Start#1018182109761320TS#{
+  "input": {
+    "text": "123456789"
+  },
+  "context": {
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000,
+    "invalid_auth_attempt": false,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_3_1509120231185"
+        }
+      ],
+      "dialog_turn_counter": 2,
+      "dialog_request_counter": 2,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0
+        ],
+        "node_3_1509120231185": [
+          0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "usr_intent": "describe_benefits",
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,"
+    },
+    "action": {
+      "info": {
+        "PHI": {
+          "type": "taxid",
+          "enableSmartCorrection": "true"
+        }
+      },
+      "route": "TTS",
+      "method": ""
+    },
+    "tin_tries": 0,
+    "soe_context_map": {
+      "enable_taxid_correction": true,
+      "phi_flag": "taxid"
+    }
+  }
+}VG to SOE  Request End 
+12-29-2017 13:57:37.228  [http-nio-8080-exec-8]
+        INFO 
+        c.i.s.c.ConversationController.info(149) - {"input":"123456789","method":"converse","conversation_id":"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab","dialog_id":"1fa52463-8829-4801-9416-c6e87892c2c3"} 
+12-29-2017 13:57:37.228 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        com.ibm.soe.vg.debug(123) -  workspaceId:1fa52463-8829-4801-9416-c6e87892c2c3 convsId:a79b63b1-f2c6-4906-88b7-40fd68a3d1ab input:123456789 
+12-29-2017 13:57:37.229 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Value of phiFlag : ":"taxid"} 
+12-29-2017 13:57:37.230 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Environment Variable: SOE_SMART_CORRECTION - ":"true"} 
+12-29-2017 13:57:37.231 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(92) - SOE_SMART_CORRECTION is enabled, smart corrector will be invoked. 
+12-29-2017 13:57:37.232 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.n.s.corrector.SmartCorrector.debug(118) - {"input text:":"123456789","phiflag":"taxid"} 
+12-29-2017 13:57:37.232 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        com.ibm.soe.vg.debug(123) - 1 alternative(s) created for input(including original input): 
+12-29-2017 13:57:37.233 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        com.ibm.soe.vg.debug(123) - Alternative: 123456789 
+12-29-2017 13:57:37.233 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Environment Variable: SOE_NUMBER_FORMATTING - ":"true"} 
+12-29-2017 13:57:37.234 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(92) - SOE_NUMBER_FORMATTING is enabled, number formatting will be invoked. 
+12-29-2017 13:57:37.234 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"In invokeNumberFormatting Input : ":"123456789"} 
+12-29-2017 13:57:37.235 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Value of phiFlag : ":"taxid"} 
+12-29-2017 13:57:37.236 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        com.ibm.soe.jython.NumberFormatter.debug(123) - smartFormatterPath:soe-stt-smart-formatter 
+['soe-stt-smart-formatter', 'C:\\code\\humana\\SOE-Humana\\Lib\\Lib', 'C:\\Users\\ParitoshRanjan\\.m2\\repository\\org\\python\\jython-standalone\\2.7.1b2\\jython-standalone-2.7.1b2.jar\\Lib', '__classpath__', '__pyclasspath__/', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter']
+s0 is  zdummyz  zdummyz  zdummyz  123456789  zdummyz  zdummyz  zdummyz  zdummyz 
+
+validity is 1
+
+datesEN2 arguments:  zdummyz  zdummyz  zdummyz  123456789  zdummyz  zdummyz  zdummyz  zdummyz 
+
+forcedate: 0
+dates processing :zdummyz zdummyz zdummyz zdummyz zdummyz zdummyz 123456789 zdummyz zdummyz zdummyz zdummyz zdummyz zdummyz zdummyz zdummyz s1 is  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz  123456789  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz 
+
+
+123456789 
+
+s3 is 123456789
+
+s4 is    123456789     
+
+
+12-29-2017 13:57:37.930 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Numeric output after formatting : ":"123456789"} 
+12-29-2017 13:57:37.932 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.s.impl.NumericInputHandlerImpl.debug(123) - Parsed variations for taxid : [123456789] 
+12-29-2017 13:57:37.932 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        com.ibm.soe.dtmf.DTMFHandler.trace(92) - Removed DTMF Character from memberId to: 123456789 
+12-29-2017 13:57:37.933 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - message::Entry 
+12-29-2017 13:57:37.933 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.w.d.util.CredentialUtils.getKeyUsingJNDI(125) - JNDI watson-developer-cloud/conversation/credentials not found. 
+12-29-2017 13:57:38.014 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Endpoint used for wcs":"https://gateway.watsonplatform.net/conversation/api"} 
+12-29-2017 13:57:38.019 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - SOE to WCS Request Start#1018182902941869TS#{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,"
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000,
+    "invalid_auth_attempt": false,
+    "tin_tries": 0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_3_1509120231185"
+        }
+      ],
+      "dialog_turn_counter": 2,
+      "dialog_request_counter": 2,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0
+        ],
+        "node_3_1509120231185": [
+          0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again"
+  },
+  "input": {
+    "text": "XXXXXXXXX"
+  }
+}SOE to WCS Request End 
+12-29-2017 13:57:38.042 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-23-thread-1]
+        DEBUG
+        com.ibm.soe.service.wcs.debug(118) - {"inputText:":"XXXXXXXXX"} 
+12-29-2017 13:57:39.683 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-23-thread-1]
+        DEBUG
+        c.i.s.s.impl.WCSHttpServiceImpl.debug(123) - wcs response:{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,"
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "invalid_auth_attempt": false,
+    "tin_tries": 1.0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "Call Authenticate Provider"
+        }
+      ],
+      "dialog_turn_counter": 3.0,
+      "dialog_request_counter": 3.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "action": {
+      "info": {
+        "PHI": {
+          "type": "taxid",
+          "enableSmartCorrection": "true"
+        }
+      },
+      "route": "API",
+      "method": "authenticateProvider"
+    }
+  },
+  "entities": [
+    {
+      "entity": "member_id",
+      "location": [
+        0,
+        9
+      ],
+      "value": "valid_mem_id"
+    },
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        0,
+        9
+      ],
+      "value": "valid"
+    },
+    {
+      "entity": "tax_id",
+      "location": [
+        0,
+        9
+      ],
+      "value": "valid_id"
+    }
+  ],
+  "intents": [],
+  "output": {
+    "text": [],
+    "nodes_visited": [
+      "VALID TAX ID",
+      "Call Authenticate Provider"
+    ],
+    "vgwActionSequence": [
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "timestamps": true,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": true,
+            "customization_id": "41b7390a-9398-4d3f-ac46-ae3bf25609c7",
+            "smart_formatting": true,
+            "firmup_silence_time": 1.5,
+            "customization_weight": 0.8,
+            "x-watson-learning-opt-out": true
+          }
+        }
+      },
+      {
+        "command": "vgwActDisableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActEnableSpeechBargeIn"
+      },
+      {
+        "command": "vgwActPauseDTMF"
+      }
+    ],
+    "log_messages": []
+  },
+  "input": {
+    "text": "XXXXXXXXX"
+  }
+} 
+12-29-2017 13:57:39.684 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-23-thread-1]
+        DEBUG
+        com.ibm.soe.wcs.responsetime.debug(118) - {"responsetime":1640} 
+12-29-2017 13:57:39.684 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-23-thread-1]
+        DEBUG
+        com.ibm.soe.service.wcs.debug(118) - {"outputText:":"[]"} 
+12-29-2017 13:57:39.685 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - WCS to SOE response Start#1018184568342620TS#{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,"
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "invalid_auth_attempt": false,
+    "tin_tries": 1.0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "Call Authenticate Provider"
+        }
+      ],
+      "dialog_turn_counter": 3.0,
+      "dialog_request_counter": 3.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "action": {
+      "info": {
+        "PHI": {
+          "type": "taxid",
+          "enableSmartCorrection": "true"
+        }
+      },
+      "route": "API",
+      "method": "authenticateProvider"
+    }
+  },
+  "entities": [
+    {
+      "entity": "member_id",
+      "location": [
+        0,
+        9
+      ],
+      "value": "valid_mem_id"
+    },
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        0,
+        9
+      ],
+      "value": "valid"
+    },
+    {
+      "entity": "tax_id",
+      "location": [
+        0,
+        9
+      ],
+      "value": "valid_id"
+    }
+  ],
+  "intents": [],
+  "output": {
+    "text": [],
+    "nodes_visited": [
+      "VALID TAX ID",
+      "Call Authenticate Provider"
+    ],
+    "vgwActionSequence": [
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "timestamps": true,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": true,
+            "customization_id": "41b7390a-9398-4d3f-ac46-ae3bf25609c7",
+            "smart_formatting": true,
+            "firmup_silence_time": 1.5,
+            "customization_weight": 0.8,
+            "x-watson-learning-opt-out": true
+          }
+        }
+      },
+      {
+        "command": "vgwActDisableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActEnableSpeechBargeIn"
+      },
+      {
+        "command": "vgwActPauseDTMF"
+      }
+    ],
+    "log_messages": []
+  },
+  "input": {
+    "text": "XXXXXXXXX"
+  }
+}WCS to SOE response End 
+12-29-2017 13:57:39.687 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Entities from wcs response: ":[{"entity":"member_id","location":[0,9],"value":"valid_mem_id"},{"entity":"ssn_medicare","location":[0,9],"value":"valid"},{"entity":"tax_id","location":[0,9],"value":"valid_id"}]} 
+12-29-2017 13:57:39.689 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Intents from wcs response":[]} 
+12-29-2017 13:57:39.689 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - message::Exit 
+12-29-2017 13:57:39.738 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - doNextActions::Entry 
+12-29-2017 13:57:39.739 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - getActionsToPerform::Entry 
+12-29-2017 13:57:39.739 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - route : API,method : authenticateProvider,info :{PHI={type=taxid, enableSmartCorrection=true}} 
+12-29-2017 13:57:39.739 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - getActionToPerform::Exit 
+12-29-2017 13:57:39.740 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        com.ibm.soe.service.impl.SOECoreImpl.debug(123) - Populating Variants. 
+12-29-2017 13:57:39.740 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.c.f.SmartVariationPopulator.debug(118) - {"In Smart Variant Populator. Routemethod ":"authenticateProvider"} 
+12-29-2017 13:57:39.740 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.c.f.SmartVariationPopulator.debug(123) - Populating variants for provider auth. 
+12-29-2017 13:57:39.741 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        com.ibm.soe.vg.debug(123) - No more variants available for provider auth 
+12-29-2017 13:57:39.741 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        INFO 
+        c.i.h.service.impl.AppServiceImpl.info(149) - {"input":"XXXXXXXXX","conversation_id":"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab","profile":"{\n  \"name_values\": [\n    {\n      \"name\": \"CURRENT_MEMBER\",\n      \"value\": \"{BENEFIT_CODE\\u003d98,}\"\n    },\n    {\n      \"name\": \"vgwSIPFromURI\",\n      \"value\": \"sip:918043185594@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwTransferFailedMessage\",\n      \"value\": \"Sorry, I could not transfer your call at this time. Please try your call again.\"\n    },\n    {\n      \"name\": \"vgwDisconnectCallOnTransferFailure\",\n      \"value\": \"Yes\"\n    },\n    {\n      \"name\": \"vgwPostResponseTimeoutCount\",\n      \"value\": \"20000.0\"\n    },\n    {\n      \"name\": \"invalid_auth_attempt\",\n      \"value\": \"false\"\n    },\n    {\n      \"name\": \"tin_tries\",\n      \"value\": \"1.0\"\n    },\n    {\n      \"name\": \"vgwSIPCallID\",\n      \"value\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwSIPRequestURI\",\n      \"value\": \"sip:1910001@133.29.9.85:5060;transport\\u003dtcp\"\n    },\n    {\n      \"name\": \"usr_intent\",\n      \"value\": \"describe_benefits\"\n    },\n    {\n      \"name\": \"conversation_id\",\n      \"value\": \"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab\"\n    },\n    {\n      \"name\": \"contracting_letter_trigger\",\n      \"value\": \"\"\n    },\n    {\n      \"name\": \"input_tries\",\n      \"value\": \"0.0\"\n    },\n    {\n      \"name\": \"play_mem_group\",\n      \"value\": \"false\"\n    },\n    {\n      \"name\": \"CURRENT_DATE\",\n      \"value\": \"12/29/2017\"\n    },\n    {\n      \"name\": \"vgwSessionID\",\n      \"value\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwConversationFailedMessage\",\n      \"value\": \"Sorry, we are having technical difficulties, please try your call again\"\n    },\n    {\n      \"name\": \"action\",\n      \"value\": \"{info\\u003d{PHI\\u003d{type\\u003dtaxid, enableSmartCorrection\\u003dtrue}}, route\\u003dAPI, method\\u003dauthenticateProvider}\"\n    }\n  ]\n}","dialog_id":"1fa52463-8829-4801-9416-c6e87892c2c3"} 
+12-29-2017 13:57:39.742 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Entry::performAction 
+12-29-2017 13:57:39.743 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(118) - {"actionToPerform:":"com.ibm.humana.rule.action.AuthenticateProviderImpl"} 
+12-29-2017 13:57:39.757 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - actionToPerform:com.ibm.humana.rule.action.AuthenticateProviderImpl 
+12-29-2017 13:57:39.757 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - executeAction::start 
+12-29-2017 13:57:39.757 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.r.a.AuthenticateProviderImpl.trace(92) - started 
+12-29-2017 13:57:39.758 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.r.a.AuthenticateProviderImpl.trace(92) - finished 
+12-29-2017 13:57:39.758 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        INFO 
+        c.i.h.r.a.AuthenticateProviderImpl.info(149) - {"request":{"taxId":"123456789","requestHeader":{"environment":"LOCAL","ucid":"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26","dnis":"1910001"}},"method":"performAction","conversation_id":"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab","dialog_id":"1fa52463-8829-4801-9416-c6e87892c2c3"} 
+12-29-2017 13:57:39.759 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.s.i.HumanaWrapperServiceImpl.trace(92) - authenticateProvider using JSON req:: start 
+12-29-2017 13:57:39.759 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.helper.HumanaHelper.debug(118) - {"Humana API End from docker":"http://hummana-simulator-m3.mybluemix.net/api/simulator/Provider/Auth"} 
+12-29-2017 13:57:39.760 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.s.i.HumanaWrapperServiceImpl.trace(92) - Humana API Request : {
+  "taxId": "123456789",
+  "requestHeader": {
+    "environment": "LOCAL",
+    "ucid": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "dnis": "1910001"
+  }
+} 
+12-29-2017 13:57:39.760 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.s.impl.HumanaHttpServiceImpl.debug(123) - Humana API URL : http://hummana-simulator-m3.mybluemix.net/api/simulator/Provider/Auth 
+12-29-2017 13:57:39.760 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.s.impl.HumanaHttpServiceImpl.debug(123) - Humana API Request Start#1018184644134272TS#{
+  "taxId": "123456789",
+  "requestHeader": {
+    "environment": "LOCAL",
+    "ucid": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "dnis": "1910001"
+  }
+}Humana API Request End 
+12-29-2017 13:57:39.776 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.s.impl.HumanaHttpServiceImpl.trace(87) - {"request":"{\n  \"taxId\": \"123456789\",\n  \"requestHeader\": {\n    \"environment\": \"LOCAL\",\n    \"ucid\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\",\n    \"dnis\": \"1910001\"\n  }\n}","URL_PATH":"http://hummana-simulator-m3.mybluemix.net/api/simulator/Provider/Auth"} 
+12-29-2017 13:57:40.783 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.s.impl.HumanaHttpServiceImpl.debug(118) - {" maxRetries:":2," HttpStatusCode:":200," executionCount:":1," interval:":1000} 
+12-29-2017 13:57:40.784 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        com.ibm.soe.humana.responsetime.debug(118) - {" URL":"http://hummana-simulator-m3.mybluemix.net/api/simulator/Provider/Auth","responsetime":1008," HttpStatusCode":200} 
+12-29-2017 13:57:40.784 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.s.impl.HumanaHttpServiceImpl.debug(123) - Humana API Response Start#1018185668154804TS#{
+  "responseHeader": {
+    "environment": "DEV",
+    "version": "V2.0",
+    "metaData": {
+      "ucid": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+      "transactionId": "8296a863-46b0-44af-aca9-cab9e7cd8c68",
+      "statusCode": "200",
+      "statusDescription": "SUCCESS",
+      "dnis": "191001"
+    },
+    "metrics": {
+      "duration": "0",
+      "requestTimeStamp": "7/1/2017 9:44:19 AM",
+      "responseTimeStamp": "7/1/2017 9:44:19 AM"
+    },
+    "recordInfo": {
+      "total": 1,
+      "filtered": 1,
+      "returned": 1,
+      "pageMetaData": {
+        "startRecord": 1,
+        "endRecord": 1,
+        "recordsLimit": 10,
+        "endOfRecord": true
+      }
+    }
+  },
+  "provider": {
+    "taxId": "999999977",
+    "exists": true
+  },
+  "message": {
+    "type": "Information",
+    "code": "PSI0001",
+    "source": "Humana",
+    "description": "Provider details were returned successfully."
+  }
+}Humana API Response End 
+12-29-2017 13:57:40.785 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        INFO 
+        c.i.h.s.i.HumanaWrapperServiceImpl.info(154) - Elapsed Time::Wrapper authenticateProvider()::1025 
+12-29-2017 13:57:40.785 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.s.i.HumanaWrapperServiceImpl.trace(92) - authenticateProvider using JSON req:: end 
+12-29-2017 13:57:40.786 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        INFO 
+        c.i.h.r.a.AuthenticateProviderImpl.info(149) - {"method":"performAction","conversation_id":"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab","response":"{\r\n\t\"responseHeader\": {\r\n\t\t\"environment\": \"DEV\",\r\n\t\t\"version\": \"V2.0\",\r\n\t\t\"metaData\": {\r\n\t\t\t\"ucid\": \"00FA08005010A05877E23D\",\r\n\t\t\t\"transactionId\": \"8296a863-46b0-44af-aca9-cab9e7cd8c68\",\r\n\t\t\t\"statusCode\": \"200\",\r\n\t\t\t\"statusDescription\": \"SUCCESS\",\r\n\t\t\t\"dnis\": \"191001\"\r\n\t\t},\r\n\t\t\"metrics\": {\r\n\t\t\t\"duration\": \"0\",\r\n\t\t\t\"requestTimeStamp\": \"7/1/2017 9:44:19 AM\",\r\n\t\t\t\"responseTimeStamp\": \"7/1/2017 9:44:19 AM\"\r\n\t\t},\r\n\t\t\"recordInfo\": {\r\n\t\t\t\"total\": 1,\r\n\t\t\t\"filtered\": 1,\r\n\t\t\t\"returned\": 1,\r\n\t\t\t\"pageMetaData\": {\r\n\t\t\t\t\"startRecord\": 1,\r\n\t\t\t\t\"endRecord\": 1,\r\n\t\t\t\t\"recordsLimit\": 10,\r\n\t\t\t\t\"endOfRecord\": true\r\n\t\t\t}\r\n\t\t}\r\n\t},\r\n\t\"provider\": {\r\n\t\t\"taxId\": \"999999977\",\r\n\t\t\"exists\": true\r\n\t},\r\n\t\"message\": {\r\n\t\t\"type\": \"Information\",\r\n\t\t\"code\": \"PSI0001\",\r\n\t\t\"source\": \"Humana\",\r\n\t\t\"description\": \"Provider details were returned successfully.\"\r\n\t}\r\n}","dialog_id":"1fa52463-8829-4801-9416-c6e87892c2c3"} 
+12-29-2017 13:57:40.787 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        INFO 
+        c.i.h.r.a.AuthenticateProviderImpl.info(154) - Elapsed Time::authenticateProvider()::1026 
+12-29-2017 13:57:40.787 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        INFO 
+        c.i.h.r.a.AuthenticateProviderImpl.info(154) - Provider had a valid TIN 
+12-29-2017 13:57:40.788 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - executeAction::end 
+12-29-2017 13:57:40.788 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Judging whether api should be retried 
+12-29-2017 13:57:40.788 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Is APi?: true 
+12-29-2017 13:57:40.789 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Was last api call successful?: true 
+12-29-2017 13:57:40.791 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Are more variants for input available?:false 
+12-29-2017 13:57:40.791 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Exit::performAction 
+12-29-2017 13:57:40.792 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - doNextActions::Exit 
+12-29-2017 13:57:40.792 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - Entering postProcessing  
+12-29-2017 13:57:40.792 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - message::Entry 
+12-29-2017 13:57:40.793 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.w.d.util.CredentialUtils.getKeyUsingJNDI(125) - JNDI watson-developer-cloud/conversation/credentials not found. 
+12-29-2017 13:57:40.800 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Endpoint used for wcs":"https://gateway.watsonplatform.net/conversation/api"} 
+12-29-2017 13:57:40.800 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - SOE to WCS Request Start#1018185684105176TS#{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,"
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "invalid_auth_attempt": false,
+    "tin_tries": 1.0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "Call Authenticate Provider"
+        }
+      ],
+      "dialog_turn_counter": 3.0,
+      "dialog_request_counter": 3.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again"
+  },
+  "input": {
+    "text": "##TIN_VALID##"
+  }
+}SOE to WCS Request End 
+12-29-2017 13:57:40.950 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-24-thread-1]
+        DEBUG
+        com.ibm.soe.service.wcs.debug(118) - {"inputText:":"##TIN_VALID##"} 
+12-29-2017 13:57:42.560 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-24-thread-1]
+        DEBUG
+        c.i.s.s.impl.WCSHttpServiceImpl.debug(123) - wcs response:{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1.0,
+      "IS_MULTI_MEMBER": false
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "invalid_auth_attempt": false,
+    "tin_tries": 1.0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "Member Verification No Slots"
+        }
+      ],
+      "dialog_turn_counter": 4.0,
+      "dialog_request_counter": 4.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "action": {
+      "route": "TTS",
+      "method": "",
+      "info": {
+        "PHI": {
+          "type": "member_id",
+          "enableSmartCorrection": "true"
+        }
+      }
+    },
+    "Tax_validated": true,
+    "EXPECTING_DTMF_MEMBER_ID": true
+  },
+  "entities": [
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        6,
+        11
+      ],
+      "value": "valid"
+    }
+  ],
+  "intents": [],
+  "output": {
+    "text": [],
+    "nodes_visited": [
+      "TIN Valid",
+      "Member Verification No Slots"
+    ],
+    "vgwActionSequence": [
+      {
+        "command": "vgwActUnPauseDTMF"
+      },
+      {
+        "command": "vgwActEnableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "grammars": [
+              {
+                "grammar_type": "application/srgs",
+                "grammar_source": "#ABNF 1.0 ISO-8859-1; \n language en-US; \n mode voice; \n root $root; \n $root \u003d [$memberID] ($memberIdDigits | $dontKnow ) [$iSmemberID]; \n $memberIdDigits \u003d (\"H.\" | $digit) $digit $digit $digit $digit $digit $digit $digit $digit; \n $digit \u003d oh | zero | one | two | three | four | five | six | seven | eight | nine ; \n $memberID \u003d the member is | the member ID is | the ID is | ID is | member ID is ; \n $iSmemberID \u003d is the member | is the member ID | is the ID | is ID | is member ID ; \n $dontKnow \u003d I don\u0027t know | I don\u0027t have it | I do not have one | I do not know | I do not have it | I do not have one | agent | representative | live agent | customer service | talk to agent | talk to representative | talk to live agent | talk to customer service | speak to agent | speak to representative | speak to live agent | speak to customer service | transfer to agent | transfer to representative | transfer to live agent | transfer to customer service;"
+              }
+            ],
+            "timestamps": false,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": false,
+            "customization_id": "ab3ec364-1d4a-4321-b3f0-0f5eca57d6c3",
+            "max_alternatives": 2.0,
+            "smart_formatting": false,
+            "firmup_silence_time": 1.5,
+            "x-watson-learning-opt-out": true
+          },
+          "confidenceScoreThreshold": 0.0
+        }
+      },
+      {
+        "command": "vgwActPlayText",
+        "parameters": {
+          "text": [
+            "\u003cspeak version\u003d\u00271.0\u0027\u003eWhat\u0027s the member\u0027s Humama ID?\u003c/speak\u003e"
+          ]
+        }
+      },
+      {
+        "command": "vgwActCollectDtmf",
+        "parameters": {
+          "dtmfCount": "9"
+        }
+      }
+    ],
+    "log_messages": []
+  },
+  "input": {
+    "text": "##TIN_VALID##"
+  }
+} 
+12-29-2017 13:57:42.560 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-24-thread-1]
+        DEBUG
+        com.ibm.soe.wcs.responsetime.debug(118) - {"responsetime":1600} 
+12-29-2017 13:57:42.561 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-24-thread-1]
+        DEBUG
+        com.ibm.soe.service.wcs.debug(118) - {"outputText:":"[]"} 
+12-29-2017 13:57:42.562 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - WCS to SOE response Start#1018187445098211TS#{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1.0,
+      "IS_MULTI_MEMBER": false
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "invalid_auth_attempt": false,
+    "tin_tries": 1.0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "Member Verification No Slots"
+        }
+      ],
+      "dialog_turn_counter": 4.0,
+      "dialog_request_counter": 4.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "action": {
+      "route": "TTS",
+      "method": "",
+      "info": {
+        "PHI": {
+          "type": "member_id",
+          "enableSmartCorrection": "true"
+        }
+      }
+    },
+    "Tax_validated": true,
+    "EXPECTING_DTMF_MEMBER_ID": true
+  },
+  "entities": [
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        6,
+        11
+      ],
+      "value": "valid"
+    }
+  ],
+  "intents": [],
+  "output": {
+    "text": [],
+    "nodes_visited": [
+      "TIN Valid",
+      "Member Verification No Slots"
+    ],
+    "vgwActionSequence": [
+      {
+        "command": "vgwActUnPauseDTMF"
+      },
+      {
+        "command": "vgwActEnableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "grammars": [
+              {
+                "grammar_type": "application/srgs",
+                "grammar_source": "#ABNF 1.0 ISO-8859-1; \n language en-US; \n mode voice; \n root $root; \n $root \u003d [$memberID] ($memberIdDigits | $dontKnow ) [$iSmemberID]; \n $memberIdDigits \u003d (\"H.\" | $digit) $digit $digit $digit $digit $digit $digit $digit $digit; \n $digit \u003d oh | zero | one | two | three | four | five | six | seven | eight | nine ; \n $memberID \u003d the member is | the member ID is | the ID is | ID is | member ID is ; \n $iSmemberID \u003d is the member | is the member ID | is the ID | is ID | is member ID ; \n $dontKnow \u003d I don\u0027t know | I don\u0027t have it | I do not have one | I do not know | I do not have it | I do not have one | agent | representative | live agent | customer service | talk to agent | talk to representative | talk to live agent | talk to customer service | speak to agent | speak to representative | speak to live agent | speak to customer service | transfer to agent | transfer to representative | transfer to live agent | transfer to customer service;"
+              }
+            ],
+            "timestamps": false,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": false,
+            "customization_id": "ab3ec364-1d4a-4321-b3f0-0f5eca57d6c3",
+            "max_alternatives": 2.0,
+            "smart_formatting": false,
+            "firmup_silence_time": 1.5,
+            "x-watson-learning-opt-out": true
+          },
+          "confidenceScoreThreshold": 0.0
+        }
+      },
+      {
+        "command": "vgwActPlayText",
+        "parameters": {
+          "text": [
+            "\u003cspeak version\u003d\u00271.0\u0027\u003eWhat\u0027s the member\u0027s Humama ID?\u003c/speak\u003e"
+          ]
+        }
+      },
+      {
+        "command": "vgwActCollectDtmf",
+        "parameters": {
+          "dtmfCount": "9"
+        }
+      }
+    ],
+    "log_messages": []
+  },
+  "input": {
+    "text": "##TIN_VALID##"
+  }
+}WCS to SOE response End 
+12-29-2017 13:57:42.563 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Entities from wcs response: ":[{"entity":"ssn_medicare","location":[6,11],"value":"valid"}]} 
+12-29-2017 13:57:42.563 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Intents from wcs response":[]} 
+12-29-2017 13:57:42.563 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - message::Exit 
+12-29-2017 13:57:42.563 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - doNextActions::Entry 
+12-29-2017 13:57:42.564 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - getActionsToPerform::Entry 
+12-29-2017 13:57:42.564 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - route : TTS,method : ,info :{PHI={type=member_id, enableSmartCorrection=true}} 
+12-29-2017 13:57:42.564 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - getActionToPerform::Exit 
+12-29-2017 13:57:42.564 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        com.ibm.soe.service.impl.SOECoreImpl.debug(123) - Populating Variants. 
+12-29-2017 13:57:42.565 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.s.c.f.SmartVariationPopulator.debug(118) - {"In Smart Variant Populator. Routemethod ":"respondToUser"} 
+12-29-2017 13:57:42.565 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        INFO 
+        c.i.h.service.impl.AppServiceImpl.info(149) - {"input":"##TIN_VALID##","conversation_id":"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab","profile":"{\n  \"name_values\": [\n    {\n      \"name\": \"CURRENT_MEMBER\",\n      \"value\": \"{BENEFIT_CODE\\u003d98,, MEMBER_INDEX\\u003d1.0, IS_MULTI_MEMBER\\u003dfalse}\"\n    },\n    {\n      \"name\": \"vgwSIPFromURI\",\n      \"value\": \"sip:918043185594@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwTransferFailedMessage\",\n      \"value\": \"Sorry, I could not transfer your call at this time. Please try your call again.\"\n    },\n    {\n      \"name\": \"vgwDisconnectCallOnTransferFailure\",\n      \"value\": \"Yes\"\n    },\n    {\n      \"name\": \"vgwPostResponseTimeoutCount\",\n      \"value\": \"20000.0\"\n    },\n    {\n      \"name\": \"invalid_auth_attempt\",\n      \"value\": \"false\"\n    },\n    {\n      \"name\": \"tin_tries\",\n      \"value\": \"1.0\"\n    },\n    {\n      \"name\": \"vgwSIPCallID\",\n      \"value\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwSIPRequestURI\",\n      \"value\": \"sip:1910001@133.29.9.85:5060;transport\\u003dtcp\"\n    },\n    {\n      \"name\": \"usr_intent\",\n      \"value\": \"describe_benefits\"\n    },\n    {\n      \"name\": \"conversation_id\",\n      \"value\": \"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab\"\n    },\n    {\n      \"name\": \"contracting_letter_trigger\",\n      \"value\": \"\"\n    },\n    {\n      \"name\": \"input_tries\",\n      \"value\": \"0.0\"\n    },\n    {\n      \"name\": \"play_mem_group\",\n      \"value\": \"false\"\n    },\n    {\n      \"name\": \"CURRENT_DATE\",\n      \"value\": \"12/29/2017\"\n    },\n    {\n      \"name\": \"vgwSessionID\",\n      \"value\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwConversationFailedMessage\",\n      \"value\": \"Sorry, we are having technical difficulties, please try your call again\"\n    },\n    {\n      \"name\": \"action\",\n      \"value\": \"{route\\u003dTTS, method\\u003d, info\\u003d{PHI\\u003d{type\\u003dmember_id, enableSmartCorrection\\u003dtrue}}}\"\n    },\n    {\n      \"name\": \"Tax_validated\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"EXPECTING_DTMF_MEMBER_ID\",\n      \"value\": \"true\"\n    }\n  ]\n}","dialog_id":"1fa52463-8829-4801-9416-c6e87892c2c3"} 
+12-29-2017 13:57:42.566 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Entry::performAction 
+12-29-2017 13:57:42.566 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(118) - {"actionToPerform:":"com.ibm.humana.rule.action.SendResponseToUserImpl"} 
+12-29-2017 13:57:42.566 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - actionToPerform:com.ibm.humana.rule.action.SendResponseToUserImpl 
+12-29-2017 13:57:42.567 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - executeAction::start 
+12-29-2017 13:57:42.567 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.r.a.SendResponseToUserImpl.trace(92) - Entering SendResponseToUserImpl::performAction 
+12-29-2017 13:57:42.567 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - Entering DialogRouteAction::setToUserResponseInConversation 
+12-29-2017 13:57:42.568 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.rule.action.DialogRouteAction.debug(123) - provider is not authenticated 
+12-29-2017 13:57:42.568 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - Exit DialogRouteAction::setToUserResponseInConversation 
+12-29-2017 13:57:42.568 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.r.a.SendResponseToUserImpl.trace(92) - Exit SendResponseToUserImpl::performAction 
+12-29-2017 13:57:42.569 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - executeAction::end 
+12-29-2017 13:57:42.569 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Judging whether api should be retried 
+12-29-2017 13:57:42.569 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Is APi?: true 
+12-29-2017 13:57:42.570 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Was last api call successful?: true 
+12-29-2017 13:57:42.570 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Are more variants for input available?:false 
+12-29-2017 13:57:42.571 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Exit::performAction 
+12-29-2017 13:57:42.571 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - doNextActions::Exit 
+12-29-2017 13:57:42.571 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - Entering postProcessing  
+12-29-2017 13:57:42.572 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - Exit postProcessing 
+12-29-2017 13:57:42.572 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - Exit postProcessing 
+12-29-2017 13:57:42.573 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        c.i.s.c.ConversationController.debug(123) - SOE to VG Response Start#1018187456083246TS#{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1.0,
+      "IS_MULTI_MEMBER": false
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "invalid_auth_attempt": false,
+    "tin_tries": 1.0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "Member Verification No Slots"
+        }
+      ],
+      "dialog_turn_counter": 4.0,
+      "dialog_request_counter": 4.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "action": {
+      "route": "TTS",
+      "method": "",
+      "info": {
+        "PHI": {
+          "type": "member_id",
+          "enableSmartCorrection": "true"
+        }
+      }
+    },
+    "Tax_validated": true,
+    "EXPECTING_DTMF_MEMBER_ID": true,
+    "soe_context_map": {
+      "enable_taxid_correction": true,
+      "taxid_variation_list": [],
+      "TIN_OR_MEMBER_ID": "123456789",
+      "ContextType": "Unauthenticated",
+      "enable_member_id_correction": true,
+      "phi_flag": "member_id"
+    }
+  },
+  "entities": [
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        6,
+        11
+      ],
+      "value": "valid"
+    }
+  ],
+  "intents": [],
+  "output": {
+    "vgwActionSequence": [
+      {
+        "command": "vgwActUnPauseDTMF"
+      },
+      {
+        "command": "vgwActEnableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "grammars": [
+              {
+                "grammar_type": "application/srgs",
+                "grammar_source": "#ABNF 1.0 ISO-8859-1; \n language en-US; \n mode voice; \n root $root; \n $root \u003d [$memberID] ($memberIdDigits | $dontKnow ) [$iSmemberID]; \n $memberIdDigits \u003d (\"H.\" | $digit) $digit $digit $digit $digit $digit $digit $digit $digit; \n $digit \u003d oh | zero | one | two | three | four | five | six | seven | eight | nine ; \n $memberID \u003d the member is | the member ID is | the ID is | ID is | member ID is ; \n $iSmemberID \u003d is the member | is the member ID | is the ID | is ID | is member ID ; \n $dontKnow \u003d I don\u0027t know | I don\u0027t have it | I do not have one | I do not know | I do not have it | I do not have one | agent | representative | live agent | customer service | talk to agent | talk to representative | talk to live agent | talk to customer service | speak to agent | speak to representative | speak to live agent | speak to customer service | transfer to agent | transfer to representative | transfer to live agent | transfer to customer service;"
+              }
+            ],
+            "timestamps": false,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": false,
+            "customization_id": "ab3ec364-1d4a-4321-b3f0-0f5eca57d6c3",
+            "max_alternatives": 2.0,
+            "smart_formatting": false,
+            "firmup_silence_time": 1.5,
+            "x-watson-learning-opt-out": true
+          },
+          "confidenceScoreThreshold": 0.0
+        }
+      },
+      {
+        "command": "vgwActPlayText",
+        "parameters": {
+          "text": [
+            "\u003cspeak version\u003d\u00271.0\u0027\u003eWhat\u0027s the member\u0027s Humama ID?\u003c/speak\u003e"
+          ]
+        }
+      },
+      {
+        "command": "vgwActCollectDtmf",
+        "parameters": {
+          "dtmfCount": "9"
+        }
+      }
+    ],
+    "text": [
+      "\u003cspeak version\u003d\u00271.0\u0027\u003eWhat\u0027s the member\u0027s Humama ID?\u003c/speak\u003e"
+    ]
+  }
+}SOE to VG Response End 
+12-29-2017 13:57:42.574 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        TRACE
+        c.i.s.c.ConversationController.trace(92) - message::exit 
+12-29-2017 13:57:42.574 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        com.ibm.soe.vg.debug(123) -  workspaceId:1fa52463-8829-4801-9416-c6e87892c2c3 convsId:a79b63b1-f2c6-4906-88b7-40fd68a3d1ab output:[<speak version='1.0'>What's the member's Humama ID?</speak>] 
+12-29-2017 13:57:42.575 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-8]
+        DEBUG
+        com.ibm.soe.responsetime.debug(118) - {"responsetime":5349} 
+12-29-2017 13:57:43.388  [http-nio-8080-exec-9]
+        DEBUG
+        c.i.s.c.ConversationController.debug(123) - VG to SOE  Request Start#1018188271484530TS#{
+  "input": {
+    "text": "H12345678"
+  },
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1,
+      "IS_MULTI_MEMBER": false
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000,
+    "invalid_auth_attempt": false,
+    "tin_tries": 1,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "Member Verification No Slots"
+        }
+      ],
+      "dialog_turn_counter": 4,
+      "dialog_request_counter": 4,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0
+        ],
+        "node_3_1509120231185": [
+          0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "action": {
+      "route": "TTS",
+      "method": "",
+      "info": {
+        "PHI": {
+          "type": "member_id",
+          "enableSmartCorrection": "true"
+        }
+      }
+    },
+    "Tax_validated": true,
+    "EXPECTING_DTMF_MEMBER_ID": true,
+    "soe_context_map": {
+      "enable_taxid_correction": true,
+      "taxid_variation_list": [],
+      "TIN_OR_MEMBER_ID": "123456789",
+      "ContextType": "Unauthenticated",
+      "enable_member_id_correction": true,
+      "phi_flag": "member_id"
+    }
+  }
+}VG to SOE  Request End 
+12-29-2017 13:57:43.389  [http-nio-8080-exec-9]
+        INFO 
+        c.i.s.c.ConversationController.info(149) - {"input":"H12345678","method":"converse","conversation_id":"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab","dialog_id":"1fa52463-8829-4801-9416-c6e87892c2c3"} 
+12-29-2017 13:57:43.389 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        com.ibm.soe.vg.debug(123) -  workspaceId:1fa52463-8829-4801-9416-c6e87892c2c3 convsId:a79b63b1-f2c6-4906-88b7-40fd68a3d1ab input:H12345678 
+12-29-2017 13:57:43.391 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Value of phiFlag : ":"member_id"} 
+12-29-2017 13:57:43.392 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Environment Variable: SOE_SMART_CORRECTION - ":"true"} 
+12-29-2017 13:57:43.392 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(92) - SOE_SMART_CORRECTION is enabled, smart corrector will be invoked. 
+12-29-2017 13:57:43.393 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.s.n.s.corrector.SmartCorrector.debug(118) - {"input text:":"H12345678","phiflag":"member_id"} 
+12-29-2017 13:57:43.393 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        com.ibm.soe.vg.debug(123) - 1 alternative(s) created for input(including original input): 
+12-29-2017 13:57:43.394 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        com.ibm.soe.vg.debug(123) - Alternative: H12345678 
+12-29-2017 13:57:43.395 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Environment Variable: SOE_NUMBER_FORMATTING - ":"true"} 
+12-29-2017 13:57:43.396 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(92) - SOE_NUMBER_FORMATTING is enabled, number formatting will be invoked. 
+12-29-2017 13:57:43.396 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"In invokeNumberFormatting Input : ":"H12345678"} 
+12-29-2017 13:57:43.397 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Value of phiFlag : ":"member_id"} 
+12-29-2017 13:57:43.397 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        com.ibm.soe.jython.NumberFormatter.debug(123) - smartFormatterPath:soe-stt-smart-formatter 
+['soe-stt-smart-formatter', 'C:\\code\\humana\\SOE-Humana\\Lib\\Lib', 'C:\\Users\\ParitoshRanjan\\.m2\\repository\\org\\python\\jython-standalone\\2.7.1b2\\jython-standalone-2.7.1b2.jar\\Lib', '__classpath__', '__pyclasspath__/', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter']
+s0 is  zdummyz  zdummyz  zdummyz  H12345678  zdummyz  zdummyz  zdummyz  zdummyz 
+
+validity is 1
+
+datesEN2 arguments:  zdummyz  zdummyz  zdummyz  H12345678  zdummyz  zdummyz  zdummyz  zdummyz 
+
+forcedate: 0
+dates processing :zdummyz zdummyz zdummyz zdummyz zdummyz zdummyz H12345678 zdummyz zdummyz zdummyz zdummyz zdummyz zdummyz zdummyz zdummyz s1 is  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz  H12345678  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz 
+
+
+H12345678 
+
+s3 is H12345678
+
+s4 is    H12345678     
+
+
+12-29-2017 13:57:43.551 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Numeric output after formatting : ":"H12345678"} 
+12-29-2017 13:57:43.553 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.h.s.impl.NumericInputHandlerImpl.debug(123) - Parsed variations for member_id : [H12345678] 
+12-29-2017 13:57:43.554 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        com.ibm.soe.dtmf.DTMFHandler.trace(92) - Removed DTMF Character from memberId to: H12345678 
+12-29-2017 13:57:43.555 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - message::Entry 
+12-29-2017 13:57:43.556 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.w.d.util.CredentialUtils.getKeyUsingJNDI(125) - JNDI watson-developer-cloud/conversation/credentials not found. 
+12-29-2017 13:57:43.568 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Endpoint used for wcs":"https://gateway.watsonplatform.net/conversation/api"} 
+12-29-2017 13:57:43.570 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - SOE to WCS Request Start#1018188453384577TS#{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1,
+      "IS_MULTI_MEMBER": false
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000,
+    "Tax_validated": true,
+    "invalid_auth_attempt": false,
+    "tin_tries": 1,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "Member Verification No Slots"
+        }
+      ],
+      "dialog_turn_counter": 4,
+      "dialog_request_counter": 4,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0
+        ],
+        "node_3_1509120231185": [
+          0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again"
+  },
+  "input": {
+    "text": "XXXXXXXXX"
+  }
+}SOE to WCS Request End 
+12-29-2017 13:57:43.589 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-25-thread-1]
+        DEBUG
+        com.ibm.soe.service.wcs.debug(118) - {"inputText:":"XXXXXXXXX"} 
+12-29-2017 13:57:45.257 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-25-thread-1]
+        DEBUG
+        c.i.s.s.impl.WCSHttpServiceImpl.debug(123) - wcs response:{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1.0,
+      "IS_MULTI_MEMBER": false
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "Tax_validated": true,
+    "invalid_auth_attempt": false,
+    "tin_tries": 1.0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_30_1502384861570"
+        }
+      ],
+      "dialog_turn_counter": 5.0,
+      "dialog_request_counter": 5.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "action": {
+      "info": {
+        "PHI": {
+          "type": "dob",
+          "enableSmartCorrection": "true"
+        }
+      },
+      "route": "TTS",
+      "method": ""
+    },
+    "ssn_tries": 0.0,
+    "MEMBER_INFO": {
+      "verification": "ID"
+    },
+    "EXPECTING_DTMF_SSN": true
+  },
+  "entities": [
+    {
+      "entity": "member_id",
+      "location": [
+        0,
+        9
+      ],
+      "value": "valid_mem_id"
+    },
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        0,
+        9
+      ],
+      "value": "valid"
+    },
+    {
+      "entity": "tax_id",
+      "location": [
+        0,
+        9
+      ],
+      "value": "valid_id"
+    }
+  ],
+  "intents": [],
+  "output": {
+    "text": [],
+    "nodes_visited": [
+      "node_30_1502384861570"
+    ],
+    "vgwActionSequence": [
+      {
+        "command": "vgwActUnPauseDTMF"
+      },
+      {
+        "command": "vgwActEnableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "timestamps": true,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": true,
+            "customization_id": "6fc110d4-a5f2-4095-9160-ad8f0fd30200",
+            "max_alternatives": 2.0,
+            "smart_formatting": false,
+            "firmup_silence_time": 1.5,
+            "customization_weight": 0.8,
+            "x-watson-learning-opt-out": true
+          }
+        }
+      },
+      {
+        "command": "vgwActPlayText",
+        "parameters": {
+          "text": [
+            "\u003cspeak version\u003d\u00271.0\u0027\u003e Now provide the member\u0027s month, d\u0027ay, and year of birth?\u003c/speak\u003e"
+          ]
+        }
+      },
+      {
+        "command": "vgwActCollectDtmf",
+        "parameters": {
+          "dtmfCount": "8"
+        }
+      }
+    ],
+    "log_messages": []
+  },
+  "input": {
+    "text": "XXXXXXXXX"
+  }
+} 
+12-29-2017 13:57:45.258 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-25-thread-1]
+        DEBUG
+        com.ibm.soe.wcs.responsetime.debug(118) - {"responsetime":1668} 
+12-29-2017 13:57:45.258 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-25-thread-1]
+        DEBUG
+        com.ibm.soe.service.wcs.debug(118) - {"outputText:":"[]"} 
+12-29-2017 13:57:45.259 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - WCS to SOE response Start#1018190142210168TS#{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1.0,
+      "IS_MULTI_MEMBER": false
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "Tax_validated": true,
+    "invalid_auth_attempt": false,
+    "tin_tries": 1.0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_30_1502384861570"
+        }
+      ],
+      "dialog_turn_counter": 5.0,
+      "dialog_request_counter": 5.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "action": {
+      "info": {
+        "PHI": {
+          "type": "dob",
+          "enableSmartCorrection": "true"
+        }
+      },
+      "route": "TTS",
+      "method": ""
+    },
+    "ssn_tries": 0.0,
+    "MEMBER_INFO": {
+      "verification": "ID"
+    },
+    "EXPECTING_DTMF_SSN": true
+  },
+  "entities": [
+    {
+      "entity": "member_id",
+      "location": [
+        0,
+        9
+      ],
+      "value": "valid_mem_id"
+    },
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        0,
+        9
+      ],
+      "value": "valid"
+    },
+    {
+      "entity": "tax_id",
+      "location": [
+        0,
+        9
+      ],
+      "value": "valid_id"
+    }
+  ],
+  "intents": [],
+  "output": {
+    "text": [],
+    "nodes_visited": [
+      "node_30_1502384861570"
+    ],
+    "vgwActionSequence": [
+      {
+        "command": "vgwActUnPauseDTMF"
+      },
+      {
+        "command": "vgwActEnableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "timestamps": true,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": true,
+            "customization_id": "6fc110d4-a5f2-4095-9160-ad8f0fd30200",
+            "max_alternatives": 2.0,
+            "smart_formatting": false,
+            "firmup_silence_time": 1.5,
+            "customization_weight": 0.8,
+            "x-watson-learning-opt-out": true
+          }
+        }
+      },
+      {
+        "command": "vgwActPlayText",
+        "parameters": {
+          "text": [
+            "\u003cspeak version\u003d\u00271.0\u0027\u003e Now provide the member\u0027s month, d\u0027ay, and year of birth?\u003c/speak\u003e"
+          ]
+        }
+      },
+      {
+        "command": "vgwActCollectDtmf",
+        "parameters": {
+          "dtmfCount": "8"
+        }
+      }
+    ],
+    "log_messages": []
+  },
+  "input": {
+    "text": "XXXXXXXXX"
+  }
+}WCS to SOE response End 
+12-29-2017 13:57:45.261 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Entities from wcs response: ":[{"entity":"member_id","location":[0,9],"value":"valid_mem_id"},{"entity":"ssn_medicare","location":[0,9],"value":"valid"},{"entity":"tax_id","location":[0,9],"value":"valid_id"}]} 
+12-29-2017 13:57:45.262 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Intents from wcs response":[]} 
+12-29-2017 13:57:45.262 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - message::Exit 
+12-29-2017 13:57:45.263 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - doNextActions::Entry 
+12-29-2017 13:57:45.263 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - getActionsToPerform::Entry 
+12-29-2017 13:57:45.263 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - route : TTS,method : ,info :{PHI={type=dob, enableSmartCorrection=true}} 
+12-29-2017 13:57:45.264 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - getActionToPerform::Exit 
+12-29-2017 13:57:45.264 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        com.ibm.soe.service.impl.SOECoreImpl.debug(123) - Populating Variants. 
+12-29-2017 13:57:45.265 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.s.s.c.f.SmartVariationPopulator.debug(118) - {"In Smart Variant Populator. Routemethod ":"respondToUser"} 
+12-29-2017 13:57:45.266 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        INFO 
+        c.i.h.service.impl.AppServiceImpl.info(149) - {"input":"XXXXXXXXX","conversation_id":"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab","profile":"{\n  \"name_values\": [\n    {\n      \"name\": \"CURRENT_MEMBER\",\n      \"value\": \"{BENEFIT_CODE\\u003d98,, MEMBER_INDEX\\u003d1.0, IS_MULTI_MEMBER\\u003dfalse}\"\n    },\n    {\n      \"name\": \"vgwSIPFromURI\",\n      \"value\": \"sip:918043185594@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwTransferFailedMessage\",\n      \"value\": \"Sorry, I could not transfer your call at this time. Please try your call again.\"\n    },\n    {\n      \"name\": \"vgwDisconnectCallOnTransferFailure\",\n      \"value\": \"Yes\"\n    },\n    {\n      \"name\": \"vgwPostResponseTimeoutCount\",\n      \"value\": \"20000.0\"\n    },\n    {\n      \"name\": \"Tax_validated\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"invalid_auth_attempt\",\n      \"value\": \"false\"\n    },\n    {\n      \"name\": \"tin_tries\",\n      \"value\": \"1.0\"\n    },\n    {\n      \"name\": \"vgwSIPCallID\",\n      \"value\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwSIPRequestURI\",\n      \"value\": \"sip:1910001@133.29.9.85:5060;transport\\u003dtcp\"\n    },\n    {\n      \"name\": \"usr_intent\",\n      \"value\": \"describe_benefits\"\n    },\n    {\n      \"name\": \"conversation_id\",\n      \"value\": \"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab\"\n    },\n    {\n      \"name\": \"contracting_letter_trigger\",\n      \"value\": \"\"\n    },\n    {\n      \"name\": \"input_tries\",\n      \"value\": \"0.0\"\n    },\n    {\n      \"name\": \"play_mem_group\",\n      \"value\": \"false\"\n    },\n    {\n      \"name\": \"CURRENT_DATE\",\n      \"value\": \"12/29/2017\"\n    },\n    {\n      \"name\": \"vgwSessionID\",\n      \"value\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwConversationFailedMessage\",\n      \"value\": \"Sorry, we are having technical difficulties, please try your call again\"\n    },\n    {\n      \"name\": \"action\",\n      \"value\": \"{info\\u003d{PHI\\u003d{type\\u003ddob, enableSmartCorrection\\u003dtrue}}, route\\u003dTTS, method\\u003d}\"\n    },\n    {\n      \"name\": \"ssn_tries\",\n      \"value\": \"0.0\"\n    },\n    {\n      \"name\": \"MEMBER_INFO\",\n      \"value\": \"{verification\\u003dID}\"\n    },\n    {\n      \"name\": \"EXPECTING_DTMF_SSN\",\n      \"value\": \"true\"\n    }\n  ]\n}","dialog_id":"1fa52463-8829-4801-9416-c6e87892c2c3"} 
+12-29-2017 13:57:45.269 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Entry::performAction 
+12-29-2017 13:57:45.270 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(118) - {"actionToPerform:":"com.ibm.humana.rule.action.SendResponseToUserImpl"} 
+12-29-2017 13:57:45.270 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - actionToPerform:com.ibm.humana.rule.action.SendResponseToUserImpl 
+12-29-2017 13:57:45.271 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - executeAction::start 
+12-29-2017 13:57:45.271 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.h.r.a.SendResponseToUserImpl.trace(92) - Entering SendResponseToUserImpl::performAction 
+12-29-2017 13:57:45.272 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - Entering DialogRouteAction::setToUserResponseInConversation 
+12-29-2017 13:57:45.272 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.h.rule.action.DialogRouteAction.debug(123) - provider is not authenticated 
+12-29-2017 13:57:45.275 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - Exit DialogRouteAction::setToUserResponseInConversation 
+12-29-2017 13:57:45.276 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.h.r.a.SendResponseToUserImpl.trace(92) - Exit SendResponseToUserImpl::performAction 
+12-29-2017 13:57:45.276 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - executeAction::end 
+12-29-2017 13:57:45.277 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Judging whether api should be retried 
+12-29-2017 13:57:45.277 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Is APi?: false 
+12-29-2017 13:57:45.278 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Was last api call successful?: false 
+12-29-2017 13:57:45.278 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Are more variants for input available?:false 
+12-29-2017 13:57:45.278 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Exit::performAction 
+12-29-2017 13:57:45.279 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - doNextActions::Exit 
+12-29-2017 13:57:45.280 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - Entering postProcessing  
+12-29-2017 13:57:45.280 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - Exit postProcessing 
+12-29-2017 13:57:45.281 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        c.i.s.c.ConversationController.debug(123) - SOE to VG Response Start#1018190163787211TS#{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1.0,
+      "IS_MULTI_MEMBER": false
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "Tax_validated": true,
+    "invalid_auth_attempt": false,
+    "tin_tries": 1.0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_30_1502384861570"
+        }
+      ],
+      "dialog_turn_counter": 5.0,
+      "dialog_request_counter": 5.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "action": {
+      "info": {
+        "PHI": {
+          "type": "dob",
+          "enableSmartCorrection": "true"
+        }
+      },
+      "route": "TTS",
+      "method": ""
+    },
+    "ssn_tries": 0.0,
+    "MEMBER_INFO": {
+      "verification": "ID"
+    },
+    "EXPECTING_DTMF_SSN": true,
+    "soe_context_map": {
+      "enable_taxid_correction": true,
+      "taxid_variation_list": [],
+      "TIN_OR_MEMBER_ID": "123456789",
+      "ContextType": "PartialAuthenticated",
+      "enable_member_id_correction": true,
+      "MEMBER_ID": "H12345678",
+      "member_id_variation_list": [],
+      "enable_dob_correction": true,
+      "phi_flag": "dob"
+    }
+  },
+  "entities": [
+    {
+      "entity": "member_id",
+      "location": [
+        0,
+        9
+      ],
+      "value": "valid_mem_id"
+    },
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        0,
+        9
+      ],
+      "value": "valid"
+    },
+    {
+      "entity": "tax_id",
+      "location": [
+        0,
+        9
+      ],
+      "value": "valid_id"
+    }
+  ],
+  "intents": [],
+  "output": {
+    "vgwActionSequence": [
+      {
+        "command": "vgwActUnPauseDTMF"
+      },
+      {
+        "command": "vgwActEnableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "timestamps": true,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": true,
+            "customization_id": "6fc110d4-a5f2-4095-9160-ad8f0fd30200",
+            "max_alternatives": 2.0,
+            "smart_formatting": false,
+            "firmup_silence_time": 1.5,
+            "customization_weight": 0.8,
+            "x-watson-learning-opt-out": true
+          }
+        }
+      },
+      {
+        "command": "vgwActPlayText",
+        "parameters": {
+          "text": [
+            "\u003cspeak version\u003d\u00271.0\u0027\u003e Now provide the member\u0027s month, d\u0027ay, and year of birth?\u003c/speak\u003e"
+          ]
+        }
+      },
+      {
+        "command": "vgwActCollectDtmf",
+        "parameters": {
+          "dtmfCount": "8"
+        }
+      }
+    ],
+    "text": [
+      "\u003cspeak version\u003d\u00271.0\u0027\u003e Now provide the member\u0027s month, d\u0027ay, and year of birth?\u003c/speak\u003e"
+    ]
+  }
+}SOE to VG Response End 
+12-29-2017 13:57:45.281 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        TRACE
+        c.i.s.c.ConversationController.trace(92) - message::exit 
+12-29-2017 13:57:45.282 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        com.ibm.soe.vg.debug(123) -  workspaceId:1fa52463-8829-4801-9416-c6e87892c2c3 convsId:a79b63b1-f2c6-4906-88b7-40fd68a3d1ab output:[<speak version='1.0'> Now provide the member's month, d'ay, and year of birth?</speak>] 
+12-29-2017 13:57:45.282 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-9]
+        DEBUG
+        com.ibm.soe.responsetime.debug(118) - {"responsetime":1894} 
+12-29-2017 13:57:45.733  [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.c.ConversationController.debug(123) - VG to SOE  Request Start#1018190616883378TS#{
+  "input": {
+    "text": "1234"
+  },
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1,
+      "IS_MULTI_MEMBER": false
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000,
+    "Tax_validated": true,
+    "invalid_auth_attempt": false,
+    "tin_tries": 1,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_30_1502384861570"
+        }
+      ],
+      "dialog_turn_counter": 5,
+      "dialog_request_counter": 5,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0
+        ],
+        "node_3_1509120231185": [
+          0
+        ]
+      }
+    },
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "action": {
+      "info": {
+        "PHI": {
+          "type": "dob",
+          "enableSmartCorrection": "true"
+        }
+      },
+      "route": "TTS",
+      "method": ""
+    },
+    "ssn_tries": 0,
+    "MEMBER_INFO": {
+      "verification": "ID"
+    },
+    "EXPECTING_DTMF_SSN": true,
+    "soe_context_map": {
+      "enable_taxid_correction": true,
+      "taxid_variation_list": [],
+      "TIN_OR_MEMBER_ID": "123456789",
+      "ContextType": "PartialAuthenticated",
+      "enable_member_id_correction": true,
+      "MEMBER_ID": "H12345678",
+      "member_id_variation_list": [],
+      "enable_dob_correction": true,
+      "phi_flag": "dob"
+    }
+  }
+}VG to SOE  Request End 
+12-29-2017 13:57:45.734  [http-nio-8080-exec-10]
+        INFO 
+        c.i.s.c.ConversationController.info(149) - {"input":"1234","method":"converse","conversation_id":"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab","dialog_id":"1fa52463-8829-4801-9416-c6e87892c2c3"} 
+12-29-2017 13:57:45.735 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        com.ibm.soe.vg.debug(123) -  workspaceId:1fa52463-8829-4801-9416-c6e87892c2c3 convsId:a79b63b1-f2c6-4906-88b7-40fd68a3d1ab input:1234 
+12-29-2017 13:57:45.737 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Value of phiFlag : ":"dob"} 
+12-29-2017 13:57:45.737 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Environment Variable: SOE_SMART_CORRECTION - ":"true"} 
+12-29-2017 13:57:45.738 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(92) - SOE_SMART_CORRECTION is enabled, smart corrector will be invoked. 
+12-29-2017 13:57:45.738 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.n.s.corrector.SmartCorrector.debug(118) - {"input text:":"1234","phiflag":"dob"} 
+12-29-2017 13:57:45.739 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        com.ibm.soe.vg.debug(123) - 1 alternative(s) created for input(including original input): 
+12-29-2017 13:57:45.740 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        com.ibm.soe.vg.debug(123) - Alternative: 1234 
+12-29-2017 13:57:45.740 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Environment Variable: SOE_NUMBER_FORMATTING - ":"true"} 
+12-29-2017 13:57:45.741 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(92) - SOE_NUMBER_FORMATTING is enabled, number formatting will be invoked. 
+12-29-2017 13:57:45.741 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"In invokeNumberFormatting Input : ":"1234"} 
+12-29-2017 13:57:45.741 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Value of phiFlag : ":"dob"} 
+12-29-2017 13:57:45.742 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Foramtted Date:  ":"\u003cDATE 1234 \u003e"} 
+12-29-2017 13:57:45.742 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        com.ibm.soe.jython.NumberFormatter.debug(123) - smartFormatterPath:soe-stt-smart-formatter 
+['soe-stt-smart-formatter', 'C:\\code\\humana\\SOE-Humana\\Lib\\Lib', 'C:\\Users\\ParitoshRanjan\\.m2\\repository\\org\\python\\jython-standalone\\2.7.1b2\\jython-standalone-2.7.1b2.jar\\Lib', '__classpath__', '__pyclasspath__/', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter', 'null', 'soe-stt-smart-formatter']
+s0 is  zdummyz  zdummyz  zdummyz  1234  zdummyz  zdummyz  zdummyz  zdummyz 
+
+validity is 1
+
+datesEN2 arguments:  zdummyz  zdummyz  zdummyz  1234  zdummyz  zdummyz  zdummyz  zdummyz 
+
+forcedate: 1
+dates processing :zdummyz zdummyz zdummyz zdummyz zdummyz zdummyz 1234 zdummyz zdummyz zdummyz zdummyz zdummyz zdummyz zdummyz zdummyz s1 is  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz  1234  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz  zdummyz 
+
+
+1234 
+
+s3 is 1234
+
+s4 is    1/2/34      
+
+
+12-29-2017 13:57:45.922 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.s.impl.NumericInputHandlerImpl.trace(87) - {"Date output after formatting : ":"1/2/34"} 
+12-29-2017 13:57:45.924 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.s.impl.NumericInputHandlerImpl.debug(123) - Parsed variations for dob : [01/02/1934] 
+12-29-2017 13:57:45.925 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        com.ibm.soe.dtmf.DTMFHandler.trace(92) - Removed DTMF Character from memberId to: 01/02/1934 
+12-29-2017 13:57:45.926 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - message::Entry 
+12-29-2017 13:57:45.928 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.w.d.util.CredentialUtils.getKeyUsingJNDI(125) - JNDI watson-developer-cloud/conversation/credentials not found. 
+12-29-2017 13:57:45.932 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Endpoint used for wcs":"https://gateway.watsonplatform.net/conversation/api"} 
+12-29-2017 13:57:45.933 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - SOE to WCS Request Start#1018190816557388TS#{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1,
+      "IS_MULTI_MEMBER": false
+    },
+    "MEMBER_INFO": {
+      "verification": "ID"
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000,
+    "Tax_validated": true,
+    "invalid_auth_attempt": false,
+    "tin_tries": 1,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "ssn_tries": 0,
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_30_1502384861570"
+        }
+      ],
+      "dialog_turn_counter": 5,
+      "dialog_request_counter": 5,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0
+        ],
+        "node_3_1509120231185": [
+          0
+        ]
+      }
+    },
+    "EXPECTING_DTMF_SSN": true,
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again"
+  },
+  "input": {
+    "text": "XX/XX/XXXX"
+  }
+}SOE to WCS Request End 
+12-29-2017 13:57:45.935 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-26-thread-1]
+        DEBUG
+        com.ibm.soe.service.wcs.debug(118) - {"inputText:":"XX/XX/XXXX"} 
+12-29-2017 13:57:47.558 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-26-thread-1]
+        DEBUG
+        c.i.s.s.impl.WCSHttpServiceImpl.debug(123) - wcs response:{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1.0,
+      "IS_MULTI_MEMBER": false
+    },
+    "MEMBER_INFO": {
+      "verification": "ID"
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "Tax_validated": true,
+    "invalid_auth_attempt": false,
+    "tin_tries": 1.0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "ssn_tries": 0.0,
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_1_1513975997195"
+        }
+      ],
+      "dialog_turn_counter": 6.0,
+      "dialog_request_counter": 6.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ],
+        "node_1_1513975997195": [
+          0.0
+        ]
+      }
+    },
+    "EXPECTING_DTMF_SSN": true,
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "action": {
+      "route": "API",
+      "method": "searchMember"
+    },
+    "member_info": {
+      "invalid_attempt": false
+    }
+  },
+  "entities": [
+    {
+      "entity": "dob",
+      "location": [
+        0,
+        10
+      ],
+      "value": "valid_dob"
+    },
+    {
+      "entity": "tax_id",
+      "location": [
+        0,
+        2
+      ],
+      "value": "invalid_id"
+    },
+    {
+      "entity": "tax_id",
+      "location": [
+        3,
+        5
+      ],
+      "value": "invalid_id"
+    },
+    {
+      "entity": "tax_id",
+      "location": [
+        6,
+        10
+      ],
+      "value": "invalid_id"
+    },
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        0,
+        2
+      ],
+      "value": "invalid"
+    },
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        3,
+        5
+      ],
+      "value": "invalid"
+    },
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        6,
+        10
+      ],
+      "value": "invalid"
+    }
+  ],
+  "intents": [],
+  "output": {
+    "text": [
+      ""
+    ],
+    "nodes_visited": [
+      "node_4_1504197389020",
+      "node_1_1513975997195"
+    ],
+    "log_messages": []
+  },
+  "input": {
+    "text": "XX/XX/XXXX"
+  }
+} 
+12-29-2017 13:57:47.559 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-26-thread-1]
+        DEBUG
+        com.ibm.soe.wcs.responsetime.debug(118) - {"responsetime":1623} 
+12-29-2017 13:57:47.559 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-26-thread-1]
+        DEBUG
+        com.ibm.soe.service.wcs.debug(118) - {"outputText:":"[]"} 
+12-29-2017 13:57:47.560 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - WCS to SOE response Start#1018192443200773TS#{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1.0,
+      "IS_MULTI_MEMBER": false
+    },
+    "MEMBER_INFO": {
+      "verification": "ID"
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "Tax_validated": true,
+    "invalid_auth_attempt": false,
+    "tin_tries": 1.0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "ssn_tries": 0.0,
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_1_1513975997195"
+        }
+      ],
+      "dialog_turn_counter": 6.0,
+      "dialog_request_counter": 6.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ],
+        "node_1_1513975997195": [
+          0.0
+        ]
+      }
+    },
+    "EXPECTING_DTMF_SSN": true,
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "action": {
+      "route": "API",
+      "method": "searchMember"
+    },
+    "member_info": {
+      "invalid_attempt": false
+    }
+  },
+  "entities": [
+    {
+      "entity": "dob",
+      "location": [
+        0,
+        10
+      ],
+      "value": "valid_dob"
+    },
+    {
+      "entity": "tax_id",
+      "location": [
+        0,
+        2
+      ],
+      "value": "invalid_id"
+    },
+    {
+      "entity": "tax_id",
+      "location": [
+        3,
+        5
+      ],
+      "value": "invalid_id"
+    },
+    {
+      "entity": "tax_id",
+      "location": [
+        6,
+        10
+      ],
+      "value": "invalid_id"
+    },
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        0,
+        2
+      ],
+      "value": "invalid"
+    },
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        3,
+        5
+      ],
+      "value": "invalid"
+    },
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        6,
+        10
+      ],
+      "value": "invalid"
+    }
+  ],
+  "intents": [],
+  "output": {
+    "text": [
+      ""
+    ],
+    "nodes_visited": [
+      "node_4_1504197389020",
+      "node_1_1513975997195"
+    ],
+    "log_messages": []
+  },
+  "input": {
+    "text": "XX/XX/XXXX"
+  }
+}WCS to SOE response End 
+12-29-2017 13:57:47.561 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Entities from wcs response: ":[{"entity":"dob","location":[0,10],"value":"valid_dob"},{"entity":"tax_id","location":[0,2],"value":"invalid_id"},{"entity":"tax_id","location":[3,5],"value":"invalid_id"},{"entity":"tax_id","location":[6,10],"value":"invalid_id"},{"entity":"ssn_medicare","location":[0,2],"value":"invalid"},{"entity":"ssn_medicare","location":[3,5],"value":"invalid"},{"entity":"ssn_medicare","location":[6,10],"value":"invalid"}]} 
+12-29-2017 13:57:47.561 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Intents from wcs response":[]} 
+12-29-2017 13:57:47.562 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - message::Exit 
+12-29-2017 13:57:47.562 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - doNextActions::Entry 
+12-29-2017 13:57:47.562 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - getActionsToPerform::Entry 
+12-29-2017 13:57:47.562 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - route : API,method : searchMember,info :null 
+12-29-2017 13:57:47.563 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - getActionToPerform::Exit 
+12-29-2017 13:57:47.563 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        com.ibm.soe.service.impl.SOECoreImpl.debug(123) - Populating Variants. 
+12-29-2017 13:57:47.563 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.c.f.SmartVariationPopulator.debug(118) - {"In Smart Variant Populator. Routemethod ":"searchMember"} 
+12-29-2017 13:57:47.564 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.c.f.SmartVariationPopulator.debug(123) - Populating variants for member search. 
+12-29-2017 13:57:47.564 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.c.f.SmartVariationPopulator.debug(118) - {"Number of MemberId variants ":0} 
+12-29-2017 13:57:47.564 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.c.f.SmartVariationPopulator.debug(118) - {"Number of SSN variants ":0} 
+12-29-2017 13:57:47.564 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        com.ibm.soe.vg.debug(123) - No more variants available for member search 
+12-29-2017 13:57:47.565 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        INFO 
+        c.i.h.service.impl.AppServiceImpl.info(149) - {"input":"XX/XX/XXXX","conversation_id":"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab","profile":"{\n  \"name_values\": [\n    {\n      \"name\": \"CURRENT_MEMBER\",\n      \"value\": \"{BENEFIT_CODE\\u003d98,, MEMBER_INDEX\\u003d1.0, IS_MULTI_MEMBER\\u003dfalse}\"\n    },\n    {\n      \"name\": \"MEMBER_INFO\",\n      \"value\": \"{verification\\u003dID}\"\n    },\n    {\n      \"name\": \"vgwSIPFromURI\",\n      \"value\": \"sip:918043185594@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwTransferFailedMessage\",\n      \"value\": \"Sorry, I could not transfer your call at this time. Please try your call again.\"\n    },\n    {\n      \"name\": \"vgwDisconnectCallOnTransferFailure\",\n      \"value\": \"Yes\"\n    },\n    {\n      \"name\": \"vgwPostResponseTimeoutCount\",\n      \"value\": \"20000.0\"\n    },\n    {\n      \"name\": \"Tax_validated\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"invalid_auth_attempt\",\n      \"value\": \"false\"\n    },\n    {\n      \"name\": \"tin_tries\",\n      \"value\": \"1.0\"\n    },\n    {\n      \"name\": \"vgwSIPCallID\",\n      \"value\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwSIPRequestURI\",\n      \"value\": \"sip:1910001@133.29.9.85:5060;transport\\u003dtcp\"\n    },\n    {\n      \"name\": \"ssn_tries\",\n      \"value\": \"0.0\"\n    },\n    {\n      \"name\": \"usr_intent\",\n      \"value\": \"describe_benefits\"\n    },\n    {\n      \"name\": \"EXPECTING_DTMF_SSN\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"conversation_id\",\n      \"value\": \"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab\"\n    },\n    {\n      \"name\": \"contracting_letter_trigger\",\n      \"value\": \"\"\n    },\n    {\n      \"name\": \"input_tries\",\n      \"value\": \"0.0\"\n    },\n    {\n      \"name\": \"play_mem_group\",\n      \"value\": \"false\"\n    },\n    {\n      \"name\": \"CURRENT_DATE\",\n      \"value\": \"12/29/2017\"\n    },\n    {\n      \"name\": \"vgwSessionID\",\n      \"value\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwConversationFailedMessage\",\n      \"value\": \"Sorry, we are having technical difficulties, please try your call again\"\n    },\n    {\n      \"name\": \"action\",\n      \"value\": \"{route\\u003dAPI, method\\u003dsearchMember}\"\n    },\n    {\n      \"name\": \"member_info\",\n      \"value\": \"{invalid_attempt\\u003dfalse}\"\n    }\n  ]\n}","dialog_id":"1fa52463-8829-4801-9416-c6e87892c2c3"} 
+12-29-2017 13:57:47.567 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Entry::performAction 
+12-29-2017 13:57:47.567 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(118) - {"actionToPerform:":"com.ibm.humana.rule.action.MemberSearchImpl"} 
+12-29-2017 13:57:47.568 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - actionToPerform:com.ibm.humana.rule.action.MemberSearchImpl 
+12-29-2017 13:57:47.569 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - executeAction::start 
+12-29-2017 13:57:47.569 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.rule.action.MemberSearchImpl.debug(123) - validating parameters 
+12-29-2017 13:57:47.570 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.rule.action.MemberSearchImpl.debug(123) - validated parameters 
+12-29-2017 13:57:47.570 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.r.a.MemberSearchRequestHandler.trace(87) - {"searchCriteria":"com.ibm.humana.domain.member.SearchCriteria@4f6de599"} 
+12-29-2017 13:57:47.570 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.s.i.HumanaWrapperMemberSearchServiceImpl.trace(92) -  HumanaWrapperMemberSearchServiceImpl searchMemberRequest :: startcom.ibm.humana.domain.member.MemberSearchRequest@5eb22f54 
+12-29-2017 13:57:47.571 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.helper.HumanaHelper.debug(118) - {"Humana API End from docker":"http://localhost:8090/api/simulator/Member/MemberSearch"} 
+12-29-2017 13:57:47.571 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.s.i.HumanaWrapperMemberSearchServiceImpl.trace(87) - {"Humana searchMemberRequest API Request : ":"{\n  \"searchCriteria\": {\n    \"memberId\": \"H12345678\",\n    \"identityType\": [\n      \"MemberIdAndDateOfBirth\"\n    ]\n  },\n  \"requestHeader\": {\n    \"environment\": \"LOCAL\",\n    \"ucid\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\",\n    \"dnis\": \"1910001\"\n  }\n}"} 
+12-29-2017 13:57:47.571 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.s.i.HumanaWrapperMemberSearchServiceImpl.trace(87) - {"Humana searchMemberRequest URL : ":"http://localhost:8090/api/simulator/Member/MemberSearch"} 
+12-29-2017 13:57:47.572 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.s.impl.HumanaHttpServiceImpl.debug(123) - Humana API URL : http://localhost:8090/api/simulator/Member/MemberSearch 
+12-29-2017 13:57:47.572 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.s.impl.HumanaHttpServiceImpl.debug(123) - Humana API Request Start#1018192455432168TS#{
+  "searchCriteria": {
+    "memberId": "H12345678",
+    "identityType": [
+      "MemberIdAndDateOfBirth"
+    ]
+  },
+  "requestHeader": {
+    "environment": "LOCAL",
+    "ucid": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "dnis": "1910001"
+  }
+}Humana API Request End 
+12-29-2017 13:57:47.574 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.s.impl.HumanaHttpServiceImpl.trace(87) - {"request":"{\n  \"searchCriteria\": {\n    \"memberId\": \"H12345678\",\n    \"identityType\": [\n      \"MemberIdAndDateOfBirth\"\n    ]\n  },\n  \"requestHeader\": {\n    \"environment\": \"LOCAL\",\n    \"ucid\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\",\n    \"dnis\": \"1910001\"\n  }\n}","URL_PATH":"http://localhost:8090/api/simulator/Member/MemberSearch"} 
+12-29-2017 13:57:47.831 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.s.impl.HumanaHttpServiceImpl.debug(118) - {" maxRetries:":2," HttpStatusCode:":200," executionCount:":1," interval:":1000} 
+12-29-2017 13:57:47.832 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        com.ibm.soe.humana.responsetime.debug(118) - {" URL":"http://localhost:8090/api/simulator/Member/MemberSearch","responsetime":258," HttpStatusCode":200} 
+12-29-2017 13:57:47.833 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.s.impl.HumanaHttpServiceImpl.debug(123) - Humana API Response Start#1018192716606126TS#{
+  "members": [
+    {
+      "firstName": "MARY",
+      "lastName": "JOHNSON",
+      "dateOfBirth": "09/09/1923",
+      "ssn": "263220014",
+      "middleInitial": null,
+      "masterId": "1055118376"
+    }
+  ],
+  "message": {
+    "type": "Member Services - Information",
+    "code": "MSI0001",
+    "source": "Humana",
+    "description": "Member Auth is successful using given Member Identity Type and Member exists in Humana systems."
+  },
+  "isValidMember": true,
+  "responseHeader": {
+    "environment": "LOCAL",
+    "version": "2.0",
+    "metaData": {
+      "ucid": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+      "transactionId": "4a7cdb2f-1853-44f8-b7ea-01056d2fa087",
+      "statusCode": "200",
+      "statusDescription": "Success",
+      "dnis": "1910001"
+    },
+    "metrics": {
+      "duration": "854.6531",
+      "requestTimeStamp": "12/18/2017 11:26:10 AM",
+      "responseTimeStamp": "12/18/2017 11:26:10 AM"
+    },
+    "recordInfo": {
+      "total": 1,
+      "filtered": 1,
+      "returned": 1,
+      "pageMetaData": {
+        "startRecord": 1,
+        "endRecord": 1,
+        "recordsLimit": 10,
+        "endOfRecord": true
+      }
+    }
+  }
+}Humana API Response End 
+12-29-2017 13:57:47.834 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        INFO 
+        c.i.h.s.i.HumanaWrapperMemberSearchServiceImpl.info(149) - {"Elapsed Time::Wrapper searchMemberRequest()::":263} 
+12-29-2017 13:57:47.835 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.s.i.HumanaWrapperMemberSearchServiceImpl.trace(92) - searchMemberRequest using JSON req:: end 
+12-29-2017 13:57:47.835 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        INFO 
+        c.i.h.rule.action.MemberSearchImpl.info(154) - Member Search elapsed Time:265 
+12-29-2017 13:57:47.836 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        INFO 
+        c.i.h.rule.action.MemberSearchImpl.info(154) - Humana MemberSearchImpl Member API response: {
+  "members": [
+    {
+      "firstName": "MARY",
+      "lastName": "JOHNSON",
+      "dateOfBirth": "09/09/1923",
+      "ssn": "263220014",
+      "middleInitial": null,
+      "masterId": "1055118376"
+    }
+  ],
+  "message": {
+    "type": "Member Services - Information",
+    "code": "MSI0001",
+    "source": "Humana",
+    "description": "Member Auth is successful using given Member Identity Type and Member exists in Humana systems."
+  },
+  "isValidMember": true,
+  "responseHeader": {
+    "environment": "LOCAL",
+    "version": "2.0",
+    "metaData": {
+      "ucid": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+      "transactionId": "4a7cdb2f-1853-44f8-b7ea-01056d2fa087",
+      "statusCode": "200",
+      "statusDescription": "Success",
+      "dnis": "1910001"
+    },
+    "metrics": {
+      "duration": "854.6531",
+      "requestTimeStamp": "12/18/2017 11:26:10 AM",
+      "responseTimeStamp": "12/18/2017 11:26:10 AM"
+    },
+    "recordInfo": {
+      "total": 1,
+      "filtered": 1,
+      "returned": 1,
+      "pageMetaData": {
+        "startRecord": 1,
+        "endRecord": 1,
+        "recordsLimit": 10,
+        "endOfRecord": true
+      }
+    }
+  }
+} 
+12-29-2017 13:57:47.837 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        INFO 
+        c.i.h.rule.action.MemberSearchImpl.info(149) - {"MemberSearchResponse statusCode":"200"} 
+12-29-2017 13:57:47.838 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        INFO 
+        c.i.h.rule.action.MemberSearchImpl.info(149) - {"Message code: ":"MSI0001"} 
+12-29-2017 13:57:47.839 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - executeAction::end 
+12-29-2017 13:57:47.839 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Judging whether api should be retried 
+12-29-2017 13:57:47.839 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Is APi?: true 
+12-29-2017 13:57:47.840 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Was last api call successful?: true 
+12-29-2017 13:57:47.840 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Are more variants for input available?:false 
+12-29-2017 13:57:47.840 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Exit::performAction 
+12-29-2017 13:57:47.841 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - doNextActions::Exit 
+12-29-2017 13:57:47.841 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - Entering postProcessing  
+12-29-2017 13:57:47.841 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - message::Entry 
+12-29-2017 13:57:47.842 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.w.d.util.CredentialUtils.getKeyUsingJNDI(125) - JNDI watson-developer-cloud/conversation/credentials not found. 
+12-29-2017 13:57:47.846 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Endpoint used for wcs":"https://gateway.watsonplatform.net/conversation/api"} 
+12-29-2017 13:57:47.846 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - SOE to WCS Request Start#1018192729911983TS#{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1.0,
+      "IS_MULTI_MEMBER": false
+    },
+    "MEMBER_INFO": {
+      "verification": "ID"
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "Tax_validated": true,
+    "invalid_auth_attempt": false,
+    "member_info": {
+      "invalid_attempt": false
+    },
+    "tin_tries": 1.0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "ssn_tries": 0.0,
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_1_1513975997195"
+        }
+      ],
+      "dialog_turn_counter": 6.0,
+      "dialog_request_counter": 6.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ],
+        "node_1_1513975997195": [
+          0.0
+        ]
+      }
+    },
+    "EXPECTING_DTMF_SSN": true,
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again"
+  },
+  "input": {
+    "text": "[##MEM_ID_VALID##],[##DOB_INVALID##]"
+  }
+}SOE to WCS Request End 
+12-29-2017 13:57:47.847 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-27-thread-1]
+        DEBUG
+        com.ibm.soe.service.wcs.debug(118) - {"inputText:":"[##MEM_ID_VALID##],[##DOB_INVALID##]"} 
+12-29-2017 13:57:49.433 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-27-thread-1]
+        DEBUG
+        c.i.s.s.impl.WCSHttpServiceImpl.debug(123) - wcs response:{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1.0,
+      "IS_MULTI_MEMBER": false
+    },
+    "MEMBER_INFO": {
+      "verification": "ID"
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "Tax_validated": true,
+    "invalid_auth_attempt": false,
+    "member_info": {
+      "invalid_attempt": false
+    },
+    "tin_tries": 0.0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "ssn_tries": 0.0,
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_3_1509120231185"
+        }
+      ],
+      "dialog_turn_counter": 7.0,
+      "dialog_request_counter": 7.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ],
+        "node_1_1513975997195": [
+          0.0
+        ]
+      },
+      "branch_exited": true,
+      "branch_exited_reason": "fallback"
+    },
+    "EXPECTING_DTMF_SSN": true,
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "action": {
+      "info": {
+        "PHI": {
+          "type": "taxid",
+          "enableSmartCorrection": "true"
+        }
+      },
+      "route": "TTS",
+      "method": ""
+    }
+  },
+  "entities": [
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        26,
+        33
+      ],
+      "value": "invalid"
+    },
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        10,
+        15
+      ],
+      "value": "valid"
+    }
+  ],
+  "intents": [],
+  "output": {
+    "text": [
+      "\u003cspeak version\u003d\u00271.0\u0027\u003eLet me remind you that all benefits and payments are subject to the member\u0027s eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. \u003c/speak\u003e"
+    ],
+    "nodes_visited": [
+      "node_3_1509120231185"
+    ],
+    "vgwActionSequence": [
+      {
+        "command": "vgwActUnPauseDTMF"
+      },
+      {
+        "command": "vgwActEnableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "timestamps": false,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": false,
+            "customization_id": "184637d0-5de9-4090-8de8-bc0b22c0fb42",
+            "max_alternatives": 2.0,
+            "smart_formatting": false,
+            "firmup_silence_time": 1.5,
+            "customization_weight": 0.8,
+            "x-watson-learning-opt-out": true
+          },
+          "confidenceScoreThreshold": 0.0
+        }
+      },
+      {
+        "command": "vgwActCollectDtmf",
+        "parameters": {
+          "dtmfCount": "9"
+        }
+      },
+      {
+        "command": "vgwActPlayText",
+        "parameters": {
+          "text": [
+            "\u003cspeak version\u003d\u00271.0\u0027\u003eLet me remind you that all benefits and payments are subject to the member\u0027s eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. \u003c/speak\u003e"
+          ]
+        }
+      }
+    ],
+    "log_messages": []
+  },
+  "input": {
+    "text": "[##MEM_ID_VALID##],[##DOB_INVALID##]"
+  }
+} 
+12-29-2017 13:57:49.433 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-27-thread-1]
+        DEBUG
+        com.ibm.soe.wcs.responsetime.debug(118) - {"responsetime":1585} 
+12-29-2017 13:57:49.434 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [pool-27-thread-1]
+        DEBUG
+        com.ibm.soe.service.wcs.debug(118) - {"outputText:":"[\u003cspeak version\u003d\u00271.0\u0027\u003eLet me remind you that all benefits and payments are subject to the member\u0027s eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. \u003c/speak\u003e]"} 
+12-29-2017 13:57:49.434 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - WCS to SOE response Start#1018194317449696TS#{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1.0,
+      "IS_MULTI_MEMBER": false
+    },
+    "MEMBER_INFO": {
+      "verification": "ID"
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "Tax_validated": true,
+    "invalid_auth_attempt": false,
+    "member_info": {
+      "invalid_attempt": false
+    },
+    "tin_tries": 0.0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "ssn_tries": 0.0,
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_3_1509120231185"
+        }
+      ],
+      "dialog_turn_counter": 7.0,
+      "dialog_request_counter": 7.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ],
+        "node_1_1513975997195": [
+          0.0
+        ]
+      },
+      "branch_exited": true,
+      "branch_exited_reason": "fallback"
+    },
+    "EXPECTING_DTMF_SSN": true,
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "action": {
+      "info": {
+        "PHI": {
+          "type": "taxid",
+          "enableSmartCorrection": "true"
+        }
+      },
+      "route": "TTS",
+      "method": ""
+    }
+  },
+  "entities": [
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        26,
+        33
+      ],
+      "value": "invalid"
+    },
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        10,
+        15
+      ],
+      "value": "valid"
+    }
+  ],
+  "intents": [],
+  "output": {
+    "text": [
+      "\u003cspeak version\u003d\u00271.0\u0027\u003eLet me remind you that all benefits and payments are subject to the member\u0027s eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. \u003c/speak\u003e"
+    ],
+    "nodes_visited": [
+      "node_3_1509120231185"
+    ],
+    "vgwActionSequence": [
+      {
+        "command": "vgwActUnPauseDTMF"
+      },
+      {
+        "command": "vgwActEnableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "timestamps": false,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": false,
+            "customization_id": "184637d0-5de9-4090-8de8-bc0b22c0fb42",
+            "max_alternatives": 2.0,
+            "smart_formatting": false,
+            "firmup_silence_time": 1.5,
+            "customization_weight": 0.8,
+            "x-watson-learning-opt-out": true
+          },
+          "confidenceScoreThreshold": 0.0
+        }
+      },
+      {
+        "command": "vgwActCollectDtmf",
+        "parameters": {
+          "dtmfCount": "9"
+        }
+      },
+      {
+        "command": "vgwActPlayText",
+        "parameters": {
+          "text": [
+            "\u003cspeak version\u003d\u00271.0\u0027\u003eLet me remind you that all benefits and payments are subject to the member\u0027s eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. \u003c/speak\u003e"
+          ]
+        }
+      }
+    ],
+    "log_messages": []
+  },
+  "input": {
+    "text": "[##MEM_ID_VALID##],[##DOB_INVALID##]"
+  }
+}WCS to SOE response End 
+12-29-2017 13:57:49.435 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Entities from wcs response: ":[{"entity":"ssn_medicare","location":[26,33],"value":"invalid"},{"entity":"ssn_medicare","location":[10,15],"value":"valid"}]} 
+12-29-2017 13:57:49.436 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(118) - {"Intents from wcs response":[]} 
+12-29-2017 13:57:49.437 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.i.WatsonConversationServiceImpl.debug(123) - message::Exit 
+12-29-2017 13:57:49.437 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - doNextActions::Entry 
+12-29-2017 13:57:49.438 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - getActionsToPerform::Entry 
+12-29-2017 13:57:49.438 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - route : TTS,method : ,info :{PHI={type=taxid, enableSmartCorrection=true}} 
+12-29-2017 13:57:49.438 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.s.s.i.WatsonConversationServiceImpl.trace(92) - getActionToPerform::Exit 
+12-29-2017 13:57:49.439 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        com.ibm.soe.service.impl.SOECoreImpl.debug(123) - Populating Variants. 
+12-29-2017 13:57:49.439 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.s.c.f.SmartVariationPopulator.debug(118) - {"In Smart Variant Populator. Routemethod ":"respondToUser"} 
+12-29-2017 13:57:49.440 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        INFO 
+        c.i.h.service.impl.AppServiceImpl.info(149) - {"input":"[##MEM_ID_VALID##],[##DOB_INVALID##]","conversation_id":"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab","profile":"{\n  \"name_values\": [\n    {\n      \"name\": \"CURRENT_MEMBER\",\n      \"value\": \"{BENEFIT_CODE\\u003d98,, MEMBER_INDEX\\u003d1.0, IS_MULTI_MEMBER\\u003dfalse}\"\n    },\n    {\n      \"name\": \"MEMBER_INFO\",\n      \"value\": \"{verification\\u003dID}\"\n    },\n    {\n      \"name\": \"vgwSIPFromURI\",\n      \"value\": \"sip:918043185594@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwTransferFailedMessage\",\n      \"value\": \"Sorry, I could not transfer your call at this time. Please try your call again.\"\n    },\n    {\n      \"name\": \"vgwDisconnectCallOnTransferFailure\",\n      \"value\": \"Yes\"\n    },\n    {\n      \"name\": \"vgwPostResponseTimeoutCount\",\n      \"value\": \"20000.0\"\n    },\n    {\n      \"name\": \"Tax_validated\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"invalid_auth_attempt\",\n      \"value\": \"false\"\n    },\n    {\n      \"name\": \"member_info\",\n      \"value\": \"{invalid_attempt\\u003dfalse}\"\n    },\n    {\n      \"name\": \"tin_tries\",\n      \"value\": \"0.0\"\n    },\n    {\n      \"name\": \"vgwSIPCallID\",\n      \"value\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwSIPRequestURI\",\n      \"value\": \"sip:1910001@133.29.9.85:5060;transport\\u003dtcp\"\n    },\n    {\n      \"name\": \"ssn_tries\",\n      \"value\": \"0.0\"\n    },\n    {\n      \"name\": \"usr_intent\",\n      \"value\": \"describe_benefits\"\n    },\n    {\n      \"name\": \"EXPECTING_DTMF_SSN\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"conversation_id\",\n      \"value\": \"a79b63b1-f2c6-4906-88b7-40fd68a3d1ab\"\n    },\n    {\n      \"name\": \"contracting_letter_trigger\",\n      \"value\": \"\"\n    },\n    {\n      \"name\": \"input_tries\",\n      \"value\": \"0.0\"\n    },\n    {\n      \"name\": \"play_mem_group\",\n      \"value\": \"false\"\n    },\n    {\n      \"name\": \"CURRENT_DATE\",\n      \"value\": \"12/29/2017\"\n    },\n    {\n      \"name\": \"vgwSessionID\",\n      \"value\": \"CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26\"\n    },\n    {\n      \"name\": \"vgwConversationFailedMessage\",\n      \"value\": \"Sorry, we are having technical difficulties, please try your call again\"\n    },\n    {\n      \"name\": \"action\",\n      \"value\": \"{info\\u003d{PHI\\u003d{type\\u003dtaxid, enableSmartCorrection\\u003dtrue}}, route\\u003dTTS, method\\u003d}\"\n    }\n  ]\n}","dialog_id":"1fa52463-8829-4801-9416-c6e87892c2c3"} 
+12-29-2017 13:57:49.441 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Entry::performAction 
+12-29-2017 13:57:49.441 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(118) - {"actionToPerform:":"com.ibm.humana.rule.action.SendResponseToUserImpl"} 
+12-29-2017 13:57:49.442 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - actionToPerform:com.ibm.humana.rule.action.SendResponseToUserImpl 
+12-29-2017 13:57:49.442 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - executeAction::start 
+12-29-2017 13:57:49.443 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.r.a.SendResponseToUserImpl.trace(92) - Entering SendResponseToUserImpl::performAction 
+12-29-2017 13:57:49.443 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - Entering DialogRouteAction::setToUserResponseInConversation 
+12-29-2017 13:57:49.443 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.rule.action.DialogRouteAction.debug(123) - provider is authenticated 
+12-29-2017 13:57:49.443 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.rule.action.DialogRouteAction.debug(118) - {"masterId":"1055118376"} 
+12-29-2017 13:57:49.444 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.helper.HumanaHelper.debug(118) - {"masterId":"1055118376"} 
+12-29-2017 13:57:49.444 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - Exit DialogRouteAction::setToUserResponseInConversation 
+12-29-2017 13:57:49.445 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.r.a.SendResponseToUserImpl.trace(92) - Exit SendResponseToUserImpl::performAction 
+12-29-2017 13:57:49.445 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.h.rule.action.DialogRouteAction.trace(92) - executeAction::end 
+12-29-2017 13:57:49.445 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Judging whether api should be retried 
+12-29-2017 13:57:49.446 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Is APi?: true 
+12-29-2017 13:57:49.446 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Was last api call successful?: true 
+12-29-2017 13:57:49.447 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Are more variants for input available?:false 
+12-29-2017 13:57:49.447 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.h.service.impl.AppServiceImpl.debug(123) - Exit::performAction 
+12-29-2017 13:57:49.447 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - doNextActions::Exit 
+12-29-2017 13:57:49.448 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - Entering postProcessing  
+12-29-2017 13:57:49.448 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - Exit postProcessing 
+12-29-2017 13:57:49.448 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        com.ibm.soe.service.impl.SOECoreImpl.trace(92) - Exit postProcessing 
+12-29-2017 13:57:49.449 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        c.i.s.c.ConversationController.debug(123) - SOE to VG Response Start#1018194332214836TS#{
+  "context": {
+    "CURRENT_MEMBER": {
+      "BENEFIT_CODE": "98,",
+      "MEMBER_INDEX": 1.0,
+      "IS_MULTI_MEMBER": false
+    },
+    "MEMBER_INFO": {
+      "verification": "ID"
+    },
+    "vgwSIPFromURI": "sip:918043185594@9.55.36.26",
+    "vgwTransferFailedMessage": "Sorry, I could not transfer your call at this time. Please try your call again.",
+    "vgwDisconnectCallOnTransferFailure": "Yes",
+    "vgwPostResponseTimeoutCount": 20000.0,
+    "Tax_validated": true,
+    "invalid_auth_attempt": false,
+    "member_info": {
+      "invalid_attempt": false
+    },
+    "tin_tries": 0.0,
+    "vgwSIPCallID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwSIPRequestURI": "sip:1910001@133.29.9.85:5060;transport\u003dtcp",
+    "ssn_tries": 0.0,
+    "usr_intent": "describe_benefits",
+    "system": {
+      "dialog_stack": [
+        {
+          "dialog_node": "node_3_1509120231185"
+        }
+      ],
+      "dialog_turn_counter": 7.0,
+      "dialog_request_counter": 7.0,
+      "_node_output_map": {
+        "Tax ID Input": [
+          0.0
+        ],
+        "node_3_1509120231185": [
+          0.0
+        ],
+        "node_1_1513975997195": [
+          0.0
+        ]
+      },
+      "branch_exited": true,
+      "branch_exited_reason": "fallback"
+    },
+    "EXPECTING_DTMF_SSN": true,
+    "conversation_id": "a79b63b1-f2c6-4906-88b7-40fd68a3d1ab",
+    "contracting_letter_trigger": "",
+    "input_tries": 0.0,
+    "play_mem_group": false,
+    "CURRENT_DATE": "12/29/2017",
+    "vgwSessionID": "CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26",
+    "vgwConversationFailedMessage": "Sorry, we are having technical difficulties, please try your call again",
+    "action": {
+      "info": {
+        "PHI": {
+          "type": "taxid",
+          "enableSmartCorrection": "true"
+        }
+      },
+      "route": "TTS",
+      "method": ""
+    },
+    "soe_context_map": {
+      "enable_taxid_correction": true,
+      "taxid_variation_list": [],
+      "TIN_OR_MEMBER_ID": "123456789",
+      "ContextType": "FullAuthenticated",
+      "enable_member_id_correction": true,
+      "MEMBER_ID": "H12345678",
+      "member_id_variation_list": [],
+      "enable_dob_correction": true,
+      "dob_variation_list": [],
+      "DOB": "01/02/1934",
+      "MASTER_ID_LIST": [
+        "1055118376"
+      ],
+      "CURRENT_MEMBER_KEY": "1055118376",
+      "authenticationIndicator": true,
+      "MEMBER_AUTH": {
+        "1055118376": {
+          "MEMBER_DATA": {
+            "firstName": "MARY",
+            "lastName": "JOHNSON",
+            "masterId": "1055118376",
+            "dateOfBirth": "09/09/1923",
+            "ssn": "263220014"
+          }
+        }
+      },
+      "phi_flag": "taxid"
+    }
+  },
+  "entities": [
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        26,
+        33
+      ],
+      "value": "invalid"
+    },
+    {
+      "entity": "ssn_medicare",
+      "location": [
+        10,
+        15
+      ],
+      "value": "valid"
+    }
+  ],
+  "intents": [],
+  "output": {
+    "vgwActionSequence": [
+      {
+        "command": "vgwActUnPauseDTMF"
+      },
+      {
+        "command": "vgwActEnableDTMFBargeIn"
+      },
+      {
+        "command": "vgwActSetSTTConfig",
+        "parameters": {
+          "config": {
+            "model": "en-US_NarrowbandModel",
+            "timestamps": false,
+            "querystring": "acoustic_customization_id\u003d12a4f9a3-f730-4757-bb5a-1894c4876496",
+            "word_confidence": false,
+            "customization_id": "184637d0-5de9-4090-8de8-bc0b22c0fb42",
+            "max_alternatives": 2.0,
+            "smart_formatting": false,
+            "firmup_silence_time": 1.5,
+            "customization_weight": 0.8,
+            "x-watson-learning-opt-out": true
+          },
+          "confidenceScoreThreshold": 0.0
+        }
+      },
+      {
+        "command": "vgwActCollectDtmf",
+        "parameters": {
+          "dtmfCount": "9"
+        }
+      },
+      {
+        "command": "vgwActPlayText",
+        "parameters": {
+          "text": [
+            "\u003cspeak version\u003d\u00271.0\u0027\u003eLet me remind you that all benefits and payments are subject to the member\u0027s eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. \u003c/speak\u003e"
+          ]
+        }
+      }
+    ],
+    "text": [
+      "\u003cspeak version\u003d\u00271.0\u0027\u003eLet me remind you that all benefits and payments are subject to the member\u0027s eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. \u003c/speak\u003e"
+    ]
+  }
+}SOE to VG Response End 
+12-29-2017 13:57:49.450 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        TRACE
+        c.i.s.c.ConversationController.trace(92) - message::exit 
+12-29-2017 13:57:49.450 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        com.ibm.soe.vg.debug(123) -  workspaceId:1fa52463-8829-4801-9416-c6e87892c2c3 convsId:a79b63b1-f2c6-4906-88b7-40fd68a3d1ab output:[<speak version='1.0'>Let me remind you that all benefits and payments are subject to the member's eligibility at the time services are rendered, and claims received or benefit changes made within the past 30 days may not be reflected in this information. Please provide your tax ID number. </speak>] 
+12-29-2017 13:57:49.451 CAC4C7B-AA7C11E7-A964F291-73D0BC4F@9.55.36.26 [http-nio-8080-exec-10]
+        DEBUG
+        com.ibm.soe.responsetime.debug(118) - {"responsetime":3717} 

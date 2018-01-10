@@ -1,0 +1,21 @@
+{
+  "name": "soe-analyzer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "express-fileupload": "^0.3.0",
+    "fs": "0.0.1-security",
+    "multer": "^1.3.0",
+    "path": "^0.12.7",
+    "replaceall": "^0.1.6",
+    "request": "^2.81.0",
+    "sort-json": "^1.6.0"
+  }
+}

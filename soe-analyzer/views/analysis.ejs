@@ -1,0 +1,74 @@
+<html>
+<head>
+	<style type="text/css">
+		.headerlabel{
+			font-size: large;
+			background-color: #0078d7			
+		}
+		.contentlabel{
+			font-size: x-large;			
+		}
+		.cell{
+			padding: 10px;
+		}
+		.header {
+		  background-color: #0078d7;
+		  color: #fff;
+		  padding: 2rem;
+		}
+		.headertitle {
+	      color: white;
+	      text-decoration: none;
+	    }
+		.buttons{
+	      width: 115px;
+	      height: 25px;
+	      background: #4E9CAF;
+	      padding: 10px;
+	      text-align: center;
+	      border-radius: 5px;
+	      color: white;
+	      font-weight: bold;
+	      text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="header"> 
+	<span>
+	  <span style="text-align: center"><h1><a class="headertitle" href="/">SOE Log Analyzer</a></h1></span>
+	  <span style="text-align: right"><h2><a class="buttons" href="/">Home</a></h2></span>
+	</span>
+	  <h2>List of vgw session ids found in logs</h2> 
+	  <label class="headerlabel">Click on the vgwSessionId to analyze</label>
+
+	</div>	
+	<table border="1">
+		<th>
+			<label  class="contentlabel">Vgw Session Id</label>			
+		</th>
+		<th>
+			<label  class="contentlabel">Call Transferred</label>
+		</th>
+	<%  Object.keys(output).forEach(function (key) { %>  	
+		<tr>
+	    	<td class="cell">
+	    		<label class="contentlabel">
+	    			vgwSessionId: <a class="buttons" href="/analyzeConversation?vgwSessionId=<%=key%>"><%=key%></a>
+	    		</label>
+	    	</td>
+	    	<td class="cell">
+	    		<label class="contentlabel">
+	    			<%if(callAnalysisOutput[key].callTransferred){%>
+	    				<image src="/images/Yes.jpg"/>
+	    			<%}else{%>
+	    				<image src="/images/No.jpg"/>
+	    			<%}%>
+	    		</label>
+	    	</td>
+	    </tr>
+    <% }) %>
+</table>
+</body>
+
+</html>
